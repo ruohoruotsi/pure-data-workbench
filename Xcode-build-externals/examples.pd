@@ -1,0 +1,88 @@
+#N canvas 309 59 638 595 10;
+#X obj 55 216 message;
+#X obj 55 237 print message;
+#X obj 36 182 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 55 182 start;
+#X msg 102 182 stop;
+#X floatatom 55 358 5 0 0 0 - - -;
+#X floatatom 55 303 5 0 0 0 - - -;
+#X floatatom 108 303 5 0 0 0 - - -;
+#X obj 36 303 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 55 337 plus 100;
+#X floatatom 55 74 5 0 0 0 - - -;
+#X obj 55 108 through;
+#X floatatom 55 129 5 0 0 0 - - -;
+#X obj 250 211 outlets;
+#X floatatom 250 177 5 0 0 0 - - -;
+#X obj 231 177 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 250 253 5 0 0 0 - - -;
+#X floatatom 291 253 5 0 0 0 - - -;
+#X floatatom 373 253 5 0 0 0 - - -;
+#X floatatom 332 253 5 0 0 0 - - -;
+#X obj 250 108 inlets;
+#X floatatom 250 129 5 0 0 0 - - -;
+#X floatatom 250 74 5 0 0 0 - - -;
+#X floatatom 291 74 5 0 0 0 - - -;
+#X floatatom 332 74 5 0 0 0 - - -;
+#X floatatom 373 74 5 0 0 0 - - -;
+#X obj 36 74 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 231 74 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 250 337 lists;
+#X obj 250 358 print lists;
+#X obj 55 489 mixture;
+#X msg 250 303 list icmc SUNY Stony Brook Pd Workshop;
+#X obj 55 537 print mixture_float;
+#X obj 196 537 print mixture_float;
+#X obj 231 303 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 55 435 1.618 words 2.718 and 3.412 numbers;
+#X msg 71 457 numbers 3.412 and 2.718 words 1.618;
+#X obj 36 435 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 63 27 Pd Object Programming Workshop Examples;
+#X msg 383 458 ifconfig | grep -A 3 en1;
+#X obj 368 489 shell;
+#X obj 349 436 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 368 436 ls /Volumes/Storage/Audio/Robots;
+#X obj 368 537 print shell;
+#X text 62 40 ICMC 2010 - Cooper Baker;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 0 0;
+#X connect 6 0 9 0;
+#X connect 7 0 9 1;
+#X connect 8 0 9 0;
+#X connect 9 0 5 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 13 0 16 0;
+#X connect 13 1 17 0;
+#X connect 13 2 19 0;
+#X connect 13 3 18 0;
+#X connect 14 0 13 0;
+#X connect 15 0 13 0;
+#X connect 20 0 21 0;
+#X connect 22 0 20 0;
+#X connect 23 0 20 1;
+#X connect 24 0 20 2;
+#X connect 25 0 20 3;
+#X connect 26 0 11 0;
+#X connect 27 0 20 0;
+#X connect 28 0 29 0;
+#X connect 30 0 32 0;
+#X connect 30 1 33 0;
+#X connect 31 0 28 0;
+#X connect 34 0 28 0;
+#X connect 35 0 30 0;
+#X connect 36 0 30 0;
+#X connect 37 0 30 0;
+#X connect 39 0 40 0;
+#X connect 41 0 40 0;
+#X connect 42 0 40 0;

@@ -1,0 +1,8 @@
+#N canvas 228 178 450 300 10;
+#X obj 131 130 print;
+#X obj 125 30 loadbang;
+#X msg 135 97 \$2 \$1;
+#X obj 120 69 pack \$1 \$2;
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;

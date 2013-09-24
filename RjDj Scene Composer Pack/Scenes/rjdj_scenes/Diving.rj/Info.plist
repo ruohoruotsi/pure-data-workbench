@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+        <key>author</key>
+		<string>Frank Barknecht</string>
+		<key>description</key>
+        <string>dive into a sea of sounds
+            
+Note: This scene is silent when you are silent - go to a place with sound around you.
+
+Cover: Yhteenveto - Diving in Ekenäs, Finland 2001 at sunset
+        </string>
+		<key>name</key>
+		<string>Diving</string>
+		<key>category</key>
+		<string>Microphone</string>
+	</dict>
+</dict>
+</plist>

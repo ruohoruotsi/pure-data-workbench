@@ -1,0 +1,9 @@
+#N canvas 0 0 790 370 10;
+#X obj 174 97 inlet;
+#X obj 174 179 outlet;
+#X obj 174 124 integrate;
+#X text 277 93 integrate (low-pass filter) twice.;
+#X obj 174 149 integrate;
+#X connect 0 0 2 0;
+#X connect 2 0 4 0;
+#X connect 4 0 1 0;

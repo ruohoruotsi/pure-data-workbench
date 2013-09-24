@@ -1,0 +1,8 @@
+#N canvas 264 171 709 343 10;
+#X obj 72 63 inlet;
+#X obj 72 162 outlet;
+#X obj 72 112 u_dispatch \$1 \$2;
+#X text 125 62 for now just clone [u_dispatch] here. Later add more
+features.;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;

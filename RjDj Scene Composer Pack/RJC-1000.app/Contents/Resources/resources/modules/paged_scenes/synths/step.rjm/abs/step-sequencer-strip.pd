@@ -1,0 +1,16 @@
+#N canvas 899 22 352 289 10;
+#X text 129 104 a;
+#X text 129 127 b;
+#X text 130 150 c;
+#X text 130 171 d;
+#X text 131 192 e;
+#X text 131 220 f;
+#X text 131 242 g;
+#X obj 100 100 toggleobj \$1 a \$2;
+#X obj 100 123 toggleobj \$1 b \$2;
+#X obj 100 146 toggleobj \$1 c \$2;
+#X obj 100 169 toggleobj \$1 d \$2;
+#X obj 100 192 toggleobj \$1 e \$2;
+#X obj 100 215 toggleobj \$1 f \$2;
+#X obj 100 238 toggleobj \$1 g \$2;
+#X coords 0 -1 1 1 20 158 2 100 100;

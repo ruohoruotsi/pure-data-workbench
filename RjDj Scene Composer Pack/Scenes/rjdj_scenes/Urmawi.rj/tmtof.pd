@@ -1,0 +1,6 @@
+#N canvas 0 0 515 372 10;
+#X obj 112 78 inlet;
+#X obj 112 198 outlet;
+#X obj 112 136 tunetof 8 7 urmawi.scl.tab;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;

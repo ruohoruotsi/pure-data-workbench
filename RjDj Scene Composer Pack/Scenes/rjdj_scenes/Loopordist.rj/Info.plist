@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>Christian Haudej</string>
+		<key>description</key>
+		<string>Sample and Loop, crack and roll. Loopordist takes the sound input and plays it in all frequencies. Not for the weak.</string>
+		<key>name</key>
+		<string>Loopordist</string>
+		<key>category</key>
+		<string>Sing</string>
+	</dict>
+</dict>
+</plist>

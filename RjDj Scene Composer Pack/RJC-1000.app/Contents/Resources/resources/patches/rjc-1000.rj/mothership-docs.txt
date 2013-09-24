@@ -1,0 +1,87 @@
+These messages that are currently supported by RJC-1000.master.pd. The help
+file still is out of date. 
+
+Master only has one inlet which is, where all messages must pass through! In
+the client's _main.pd this inlet is connected to a receiver called
+"#RJC1000-control". This is meant to be a target for messages coming from the
+client app (similar to #touch etc.)
+
+First it separates messages according to the first element (Pd expert note:
+"list"-selectors are automatically trimmed.)
+
+Possible first tags are: 
+
+- "system": these are intended for tasks related to the whole system
+- "modules": these are messages for single/all modules only.
+
+The example messages in the following are all formatted to be sent to the
+RJC-1000.master.pd inlet.
+
+Possible "system" messages are: 
+
+- page <num>
+  Example: "system page 2" loads page 2
+
+- loadconfig <filename>
+  Example: "system loadconfig modules.txt"
+
+- volume <num>
+  Example: "system volume 0.6"
+
+- clearslot <num>
+  Example: "system clearslot 2": clears slot 2
+
+- clearslots
+  Example: "system clearslots": clears all slots
+
+- slot <decor> <module>
+  Example: "system slot 3 decor-s2m1-s2m1 eargasm.rjm/_module.pd" loads a
+  module into slot 3
+
+- timebase <...>
+  This has an even deeper hierarchy and accepts "bpm", "sync", "pos", "tick",
+  ... I think, currently only bpm is used. "bpm" info also is propagated to
+  modules along with a "tick".
+
+  Example: "system timebase bpm 120 4" sets quarter beat tempo to 120.
+
+- pdgui 0/1
+  Example: "system pdgui 0"
+  This is used to inform the modules and the mothership about the necessity to
+  show Pd's GUI widgets. For example _main.pd running on the iThing will send a 0 
+  which can be used to [spigot] off anything that wouldn't be visible on the device anyway 
+  to save CPU. 
+  RJC1000-master automatically forwards the message to ALL modules as "pdgui <0/1>".
+
+- vis <abstraction_name> <0/1>
+  showing and hiding modules. "abstraction_name" is without ".pd".
+    
+- swipe <...>
+  These go directly to the [rj_swipe] object inside the master patch. Useful
+  to initialize [rj_swipe] with images etc.
+
+"modules" messages: 
+
+- "modules" messages are passed to the module specified by the first element,
+  which can be "ALL" to reach all mods. They all go to the only message inlet
+  of a module.
+
+  Examples: 
+  "modules SLOT-1 p0 0.9" - set "p0" of SLOT-1 module.
+  "modules ALL vol 0.5"   - set "vol" of ALL modules.
+
+The following module messages are part of the decorators so they are available
+for all modules:
+
+- rjc_volume <float>
+  set volume from 0 ... 1, default is 0 in Pd.
+
+- rjc_pan <float>
+  set stereo pan from 0 ... 1, default is 0.5 in Pd.
+
+- switch <float>
+  switch dsp on (1) or off (0) default is 0 or off!
+  Note: "modules switch" is gone. It has to be "modules SLOT-X switch" now.
+
+Other module messages are specific to a module. This includes the
+rjc_parameter* messages for parameters exposed to the RJC1000.

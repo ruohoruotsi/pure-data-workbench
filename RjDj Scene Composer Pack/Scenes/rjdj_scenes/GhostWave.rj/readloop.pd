@@ -1,0 +1,14 @@
+#N canvas 96 167 338 180 10;
+#X obj 9 100 symbol \$1;
+#X msg 9 123 \; \$1-shot bang \;;
+#X obj 9 54 tabread \$1-loop;
+#X obj 9 8 r tick;
+#X obj 9 31 mod 16;
+#X obj 9 77 sel 1;
+#X obj 63 7 r loop-length;
+#X connect 0 0 1 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 0 0;
+#X connect 6 0 4 1;

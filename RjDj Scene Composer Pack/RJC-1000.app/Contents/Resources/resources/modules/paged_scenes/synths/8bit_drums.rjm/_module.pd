@@ -1,0 +1,357 @@
+#N canvas 20 45 594 570 10;
+#X obj -91 52 inlet~ MIC;
+#N canvas 0 245 567 355 MODULE_INFO 0;
+#X text 66 81 authors: Reality Jockey;
+#X text 66 101 description: Creates low resolution chip drums to dip
+to. The;
+#X text 65 137 decorator: s1m1-s2m1;
+#X text 65 157 tags:;
+#X text 67 57 name: 8 bit Drums;
+#X restore -91 22 pd MODULE_INFO;
+#X obj 281 52 inlet;
+#X obj 281 524 outlet;
+#N canvas 273 22 307 477 \$0-DSP 0;
+#X obj 24 314 e_bitcrusher;
+#X obj 24 343 hip~ 50;
+#N canvas 273 254 469 176 kickdrum 0;
+#X msg 12 64 30;
+#X obj 12 12 inlet;
+#X obj 12 116 outlet~;
+#X obj 93 38 loadbang;
+#X obj 12 38 sel 1;
+#X obj 12 90 abs/s_ekick1;
+#X msg 93 64 dt 1 \, sk 0.0629921 \, h2 0 \, od 1.18898 \, cy 24.9606
+\,;
+#X connect 0 0 5 0;
+#X connect 1 0 4 0;
+#X connect 3 0 6 0;
+#X connect 4 0 0 0;
+#X connect 5 0 2 0;
+#X connect 6 0 5 1;
+#X restore 24 81 pd kickdrum;
+#N canvas 0 22 553 392 snare 0;
+#X obj 37 69 noise~;
+#X obj 38 167 *~;
+#X msg 100 67 1;
+#X obj 127 28 inlet;
+#X obj 38 248 outlet~;
+#X obj 39 203 *~ 0.6;
+#X obj 135 93 sel 1;
+#X obj 100 136 c_adsr 1 1 70 0 0;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 2 0 7 0;
+#X connect 3 0 6 0;
+#X connect 5 0 4 0;
+#X connect 6 0 2 0;
+#X connect 7 0 1 1;
+#X restore 124 81 pd snare;
+#N canvas 10 118 371 314 hat 0;
+#X msg 22 119 123 456 789 70;
+#X msg 135 118 278 456 789 300;
+#X obj 94 218 *~ 0.2;
+#X obj 20 44 inlet;
+#X obj 137 46 inlet;
+#X obj 93 257 outlet~;
+#X obj 20 81 sel 1;
+#X obj 94 192 abs/s_hihat2;
+#X connect 0 0 7 0;
+#X connect 1 0 7 0;
+#X connect 2 0 5 0;
+#X connect 3 0 6 0;
+#X connect 4 0 1 0;
+#X connect 6 0 0 0;
+#X connect 7 0 2 0;
+#X restore 213 81 pd hat;
+#X obj 213 132 *~;
+#X msg 137 259 depth \$1;
+#X msg 105 288 dry \$1;
+#X obj 105 168 m_scale 0 1 1 0;
+#X obj 137 236 + 1;
+#X obj 137 215 * 9;
+#X obj 105 193 t f f;
+#X obj 133 440 outlet~ RIGHT;
+#X obj 24 441 outlet~ LEFT;
+#X obj 105 142 r \$0-Crush!;
+#X obj 24 22 inlet FROM-INPUT;
+#X obj 24 43 unpack f f f f;
+#X connect 0 0 1 0;
+#X connect 1 0 13 0;
+#X connect 1 0 12 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 5 0;
+#X connect 5 0 0 0;
+#X connect 6 0 0 1;
+#X connect 7 0 0 1;
+#X connect 8 0 11 0;
+#X connect 9 0 6 0;
+#X connect 10 0 9 0;
+#X connect 11 0 7 0;
+#X connect 11 1 10 0;
+#X connect 14 0 8 0;
+#X connect 15 0 16 0;
+#X connect 16 0 2 0;
+#X connect 16 1 3 0;
+#X connect 16 2 4 0;
+#X connect 16 3 5 1;
+#X restore -91 490 pd \$0-DSP;
+#N canvas 17 215 672 614 \$0-INPUT 0;
+#X obj 180 509 * 0.01;
+#N canvas 92 152 592 697 kick-restore 0;
+#X text 14 6 Kick Patterns;
+#X obj 13 59 list prepend set;
+#X obj 13 80 list trim;
+#X obj 13 32 inlet;
+#X obj 14 663 outlet;
+#X obj 35 108 loadbang;
+#X msg 13 146 1 1 1 1 0 1 1 1 0 0 1 0 1 0 0 0 1 0 0 0 1 0 1 0 0 0 1
+1 0 1 1 0;
+#X msg 14 274 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+0 0 0 0 0;
+#X msg 29 315 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+0 1 0 0 0;
+#X msg 45 348 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1
+0 1 0 0 0;
+#X msg 61 384 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0
+1 0 1 0 0;
+#X msg 77 418 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 1
+0 0 0 0 0;
+#X msg 93 464 1 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 1
+0 0 0 1 0;
+#X msg 108 507 1 0 0 0 1 0 0 1 0 0 1 0 1 1 0 0 1 0 0 0 1 0 1 0 0 0
+1 0 0 0 1 0;
+#X msg 124 548 1 1 1 1 0 1 1 1 0 0 1 0 1 0 0 0 1 0 0 0 1 0 1 0 0 0
+1 0 0 0 1 0;
+#X msg 140 584 1 1 1 1 0 1 1 1 0 0 1 0 1 0 0 0 1 0 0 0 1 0 1 0 0 0
+1 1 0 1 1 0;
+#X obj 14 245 sel 0 1 2 3 4 5 6 7 8;
+#X obj 14 203 m_scale 0 1 0 8.9;
+#X obj 14 224 int;
+#X text 239 253 Saved Slots;
+#X text 121 132 New patterns should be copied into saved slots;
+#X obj 99 180 inlet;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 3 0 1 0;
+#X connect 5 0 6 0;
+#X connect 7 0 4 0;
+#X connect 8 0 4 0;
+#X connect 9 0 4 0;
+#X connect 10 0 4 0;
+#X connect 11 0 4 0;
+#X connect 12 0 4 0;
+#X connect 13 0 4 0;
+#X connect 14 0 4 0;
+#X connect 15 0 4 0;
+#X connect 16 0 7 0;
+#X connect 16 1 8 0;
+#X connect 16 2 9 0;
+#X connect 16 3 10 0;
+#X connect 16 4 11 0;
+#X connect 16 5 12 0;
+#X connect 16 6 13 0;
+#X connect 16 7 14 0;
+#X connect 16 8 15 0;
+#X connect 17 0 18 0;
+#X connect 18 0 16 0;
+#X connect 21 0 17 0;
+#X restore 450 183 pd kick-restore;
+#N canvas 91 72 496 703 snare-restore 0;
+#X text 19 13 Snare Pattern;
+#X obj 23 69 list prepend set;
+#X obj 23 90 list trim;
+#X obj 23 42 inlet;
+#X obj 24 673 outlet;
+#X obj 45 118 loadbang;
+#X msg 23 156 0 0 0 0 1 0 0 0 1 1 0 0 0 0 1 0 0 0 1 1 0 0 0 0 1 1 0
+0 1 0 0 0;
+#X msg 24 284 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0
+0 0 0 0 0;
+#X msg 39 325 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0
+0 0 0 0 0;
+#X msg 55 358 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0
+0 0 0 0 0;
+#X msg 71 394 0 0 0 0 1 0 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 1
+0 1 0 0 0;
+#X msg 87 428 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0
+0 0 0 0 0;
+#X msg 103 474 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0
+0 0 1 0 0 0;
+#X msg 118 517 0 0 0 0 0 0 1 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0
+0 0 1 0 0 0;
+#X msg 134 558 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 1 1
+0 0 1 0 0 0;
+#X msg 150 594 0 0 0 0 1 0 0 0 1 1 0 0 0 0 1 0 0 0 1 1 0 0 0 0 1 1
+0 0 1 0 0 0;
+#X obj 24 257 sel 0 1 2 3 4 5 6 7 8;
+#X obj 24 213 m_scale 0 1 0 8.9;
+#X obj 24 234 int;
+#X text 249 263 Saved Slots;
+#X text 131 142 New patterns should be copied into saved slots;
+#X obj 112 193 inlet;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 3 0 1 0;
+#X connect 5 0 6 0;
+#X connect 7 0 4 0;
+#X connect 8 0 4 0;
+#X connect 9 0 4 0;
+#X connect 10 0 4 0;
+#X connect 11 0 4 0;
+#X connect 12 0 4 0;
+#X connect 13 0 4 0;
+#X connect 14 0 4 0;
+#X connect 15 0 4 0;
+#X connect 16 0 7 0;
+#X connect 16 1 8 0;
+#X connect 16 2 9 0;
+#X connect 16 3 10 0;
+#X connect 16 4 11 0;
+#X connect 16 5 12 0;
+#X connect 16 6 13 0;
+#X connect 16 7 14 0;
+#X connect 16 8 15 0;
+#X connect 17 0 18 0;
+#X connect 18 0 16 0;
+#X connect 21 0 17 0;
+#X restore 450 284 pd snare-restore;
+#N canvas 91 72 530 696 hh-restore 0;
+#X obj 16 61 list prepend set;
+#X obj 16 82 list trim;
+#X obj 16 34 inlet;
+#X obj 17 665 outlet;
+#X obj 38 110 loadbang;
+#X msg 16 148 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 1 1 1 0 1
+0 1 0 1 0;
+#X text 15 8 HiHat Pattern;
+#X msg 17 276 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0
+0 0 0 0 0;
+#X msg 32 317 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0
+0 1 0 0 0;
+#X msg 48 350 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0
+0 1 0 0 0;
+#X msg 64 386 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0 0 1 0 0
+0 1 0 0 0;
+#X msg 80 420 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1
+0 1 0 1 0;
+#X msg 96 466 1 1 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1
+0 1 0 1 0;
+#X msg 111 509 1 1 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1 0 1 0 1 1 1 0 1 0
+1 0 1 0 1 0;
+#X msg 127 550 1 0 1 0 1 0 1 0 1 0 1 0 1 1 1 0 1 0 1 0 1 1 1 0 1 0
+1 0 1 0 1 0;
+#X msg 143 586 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 1 1 1 0
+1 0 1 0 1 0;
+#X obj 17 249 sel 0 1 2 3 4 5 6 7 8;
+#X obj 17 205 m_scale 0 1 0 8.9;
+#X obj 17 226 int;
+#X text 242 255 Saved Slots;
+#X text 124 134 New patterns should be copied into saved slots;
+#X obj 101 183 inlet;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 2 0 0 0;
+#X connect 4 0 5 0;
+#X connect 7 0 3 0;
+#X connect 8 0 3 0;
+#X connect 9 0 3 0;
+#X connect 10 0 3 0;
+#X connect 11 0 3 0;
+#X connect 12 0 3 0;
+#X connect 13 0 3 0;
+#X connect 14 0 3 0;
+#X connect 15 0 3 0;
+#X connect 16 0 7 0;
+#X connect 16 1 8 0;
+#X connect 16 2 9 0;
+#X connect 16 3 10 0;
+#X connect 16 4 11 0;
+#X connect 16 5 12 0;
+#X connect 16 6 13 0;
+#X connect 16 7 14 0;
+#X connect 16 8 15 0;
+#X connect 17 0 18 0;
+#X connect 18 0 16 0;
+#X connect 21 0 17 0;
+#X restore 450 384 pd hh-restore;
+#X obj 100 100 g_pattern32 \$0-bassdrum-t 1;
+#X obj 100 200 g_pattern32 \$0-snare-t;
+#X obj 100 300 g_pattern32 \$0-hihat-t 1;
+#X obj 100 400 g_pattern32 \$0-hihatd-t 100;
+#X obj 104 15 r \$0-tick;
+#X obj 99 538 pack f f f f;
+#X obj 99 567 outlet TO-DSP;
+#X obj 104 61 t f f f f;
+#N canvas 415 493 486 271 hhvel 0;
+#X obj 52 110 list prepend set;
+#X obj 52 131 list trim;
+#X obj 52 83 inlet;
+#X obj 29 222 outlet;
+#X obj 29 57 loadbang;
+#X msg 29 168 100 55.2006 75.9998 0 61.5996 0 75.9998 0 100 0 63.9996
+0 78.3998 79.2008 61.5996 0 100 0 66.3997 84.0009 66.3997 81.6008 47.1995
+74.4008 100 0 68.7997 0 42.3994 0 63.9996 0;
+#X text 28 16 HiHat Velocity Pattern;
+#X connect 0 0 1 0;
+#X connect 1 0 5 0;
+#X connect 2 0 0 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X restore 450 484 pd hhvel restore;
+#X obj 104 36 / 2;
+#X obj 182 44 int;
+#X obj 182 65 change;
+#X obj 538 149 r \$0-Pattern;
+#X connect 0 0 9 3;
+#X connect 1 0 4 1;
+#X connect 2 0 5 1;
+#X connect 3 0 6 1;
+#X connect 4 0 9 0;
+#X connect 4 1 1 0;
+#X connect 5 0 9 1;
+#X connect 5 1 2 0;
+#X connect 6 0 9 2;
+#X connect 6 1 3 0;
+#X connect 7 0 0 0;
+#X connect 7 1 12 0;
+#X connect 8 0 13 0;
+#X connect 9 0 10 0;
+#X connect 11 0 4 0;
+#X connect 11 1 5 0;
+#X connect 11 2 6 0;
+#X connect 11 3 7 0;
+#X connect 12 0 7 1;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 15 0 11 0;
+#X connect 16 0 1 1;
+#X connect 16 0 2 1;
+#X connect 16 0 3 1;
+#X coords 0 -1 1 1 350 400 2 100 100;
+#X restore -91 82 pd \$0-INPUT;
+#N canvas 76 210 508 345 \$0-PARAMETERS 0;
+#X obj 43 301 s \$0-tick;
+#X obj 43 45 inlet;
+#X obj 106 132 cnv 15 187 127 empty empty RJC_Parameters 10 12 1 14
+-162280 -262144 0;
+#X obj 106 106 cnv 15 187 20 empty empty 8bit_Drums 57 11 1 14 -261234
+-33289 0;
+#X obj 43 77 route tick;
+#X obj 110 201 rjc_parameter_floatrange \$0 Crush! 0.6;
+#X obj 110 274 outlet;
+#X obj 110 163 rjc_parameter_floatrange \$0 Pattern 0.5;
+#X connect 1 0 4 0;
+#X connect 4 0 0 0;
+#X connect 4 1 7 0;
+#X connect 5 0 6 0;
+#X connect 7 0 5 0;
+#X coords 0 -1 1 1 200 165 2 100 100;
+#X restore 281 82 pd \$0-PARAMETERS;
+#X obj -91 531 outlet~;
+#X obj -31 532 outlet~;
+#X connect 2 0 6 0;
+#X connect 4 0 7 0;
+#X connect 4 1 8 0;
+#X connect 5 0 4 0;
+#X connect 6 0 3 0;

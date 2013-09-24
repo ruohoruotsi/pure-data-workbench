@@ -1,0 +1,7 @@
+To download the current scene onto your mobile device, follow these steps:
+
+1. Make sure your laptop and device are on the same wifi network (you can use Ad-Hoc if you like).
+
+2. Browse to http://%s:%i with the web browser on your device, and click on the scene to download it into RjDj.
+
+For future reference, it is not necessary to "Export to LAN" every time you want to export your scene to the iThing. This popup only tells you the IP address of the RJC and the instructions above. The LAN export functionality is otherwise active at all times.

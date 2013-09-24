@@ -1,0 +1,16 @@
+#N canvas 426 230 492 446 10;
+#X obj 34 35 inlet;
+#X obj 34 391 outlet;
+#X obj 55 199 loadbang;
+#X obj 34 344 u_dispatch \$1 \$2;
+#X obj 55 233 list prepend \$2 \$3;
+#X text 176 55 \$1: \$0 of parent;
+#X text 176 70 \$2: param name;
+#X text 176 85 \$3: default value;
+#X text 176 100 \$4: limit low;
+#X text 176 115 \$5: limit high;
+#X connect 0 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 0 1 0;
+#X connect 4 0 3 0;
+#X coords 0 0 1 1 179 30 0;

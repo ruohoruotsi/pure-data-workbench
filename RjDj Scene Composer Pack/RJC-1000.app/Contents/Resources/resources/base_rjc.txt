@@ -1,0 +1,21 @@
+# List of files to be included by default in the exported rjz
+RJC-1000.master.pd
+RJC_main.pd
+_main.pd
+decor-m1-m1.pd
+decor-m2-m1.pd
+decor-m2-m2.pd
+decor-s1m1-s1m1.pd
+decor-s1m1-s2m1.pd
+decor-s2m1-s2m1.pd
+rj
+rjc_device_specific/rjc_parameter.pd
+rjc_device_specific/rjc_parameter_floatrange.pd
+rjc_module.pd
+rjc1000-route.pd
+showimage.pd
+rjc_lanparty.pd
+../../images/connected.png
+../../images/disconnected.png
+# lanparty is in the top level directory
+../../../PdLANParty/lanparty.pd

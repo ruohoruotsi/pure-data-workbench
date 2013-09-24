@@ -1,0 +1,22 @@
+#N canvas 107 375 695 251 10;
+#X obj 124 179 outlet;
+#X msg 100 52 version 0.3.5;
+#X obj 255 138 outlet ext;
+#X obj 219 80 inlet ext;
+#X obj 59 179 outlet;
+#X obj 11 52 inlet ctrl;
+#X obj 58 117 mmm-ctrl \$1 \$2 \$3 \$4 \$5 \$6 \$7;
+#X text 10 8 [mmm-controller \$1-\$2 <number> <name> <rangefrom> <rangeto>
+<init> <type>];
+#X obj 350 41 loadbang;
+#X obj 350 63 list append \$1-\$2-\$4;
+#X obj 351 110 print warning;
+#X msg 350 86 please change mmm-controller to mmm-ctrl;
+#X connect 3 0 6 1;
+#X connect 5 0 6 0;
+#X connect 6 0 4 0;
+#X connect 6 1 0 0;
+#X connect 6 2 2 0;
+#X connect 8 0 9 0;
+#X connect 9 0 11 0;
+#X connect 11 0 10 0;

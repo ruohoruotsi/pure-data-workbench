@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>Enrique Erne</string>
+		<key>description</key>
+		<string>Based on a piece by Steve Reich, PianoPhase uses the accelerometer to control the phases of two piano sequences. Rotate the phone very slowly to change the phases.</string>
+		<key>name</key>
+		<string>Piano Phase</string>
+		<key>category</key>
+		<string>Listen</string>
+	</dict>
+</dict>
+</plist>

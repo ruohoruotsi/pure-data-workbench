@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>Mike Dixon</string>
+		<key>category</key>
+		<string>Sing</string>
+		<key>description</key>
+		<string>Noble Choir asks you to sing a beautiful note that gets pitch shifted to make a simple, generative melodic atmospehere.</string>
+		<key>name</key>
+		<string>Noble Choir</string>
+	</dict>
+</dict>
+</plist>

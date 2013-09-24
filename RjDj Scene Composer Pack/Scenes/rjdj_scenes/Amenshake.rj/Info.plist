@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>Roman Haefeli</string>
+		<key>description</key>
+		<string>Pray da shakin' break and move to da groove. Uses accelerometer, shake the phone, put it in your pocket and dance! </string>
+		<key>name</key>
+		<string>Amenshake</string>
+		<key>category</key>
+		<string>Move</string>
+	</dict>
+</dict>
+</plist>

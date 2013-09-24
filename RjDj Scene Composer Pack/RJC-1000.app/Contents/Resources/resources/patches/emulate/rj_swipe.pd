@@ -1,0 +1,4 @@
+#N canvas 0 0 450 300 10;
+#X obj 83 69 inlet;
+#X obj 81 169 outlet;
+#X text 85 123 rj_swipe;

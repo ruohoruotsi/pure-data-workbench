@@ -1,0 +1,55 @@
+#N canvas 45 50 1001 571 10;
+#X obj 17 62 sfile 0 player3 1 null 16;
+#X obj 15 172 sfile 1 player3 1 null 16;
+#X obj 18 286 sfile 2 player3 1 null 16;
+#X obj 498 291 sfile 6 player3 1 null 16;
+#X obj 499 401 sfile 7 player3 1 null 16;
+#X obj 17 78 sfile 0 player4 1 null 16;
+#X obj 18 302 sfile 2 player4 1 null 16;
+#X obj 15 188 sfile 1 player4 1 null 16;
+#X obj 499 417 sfile 7 player4 1 null 16;
+#X obj 17 94 sfile 0 player5 1 null 16;
+#X obj 15 204 sfile 1 player5 1 null 16;
+#X obj 18 318 sfile 2 player5 1 null 16;
+#X obj 22 422 sfile 3 player5 1 null 16;
+#X obj 17 30 sfile 0 player1 1 kk.wav 16;
+#X obj 15 140 sfile 1 player1 1 kkch.wav 16;
+#X obj 18 254 sfile 2 player1 2 kkchcp.wav 16 kkchohcp.wav 16;
+#X obj 22 358 sfile 3 player1 1 kkchohcptk.wav 16;
+#X obj 496 152 sfile 5 player1 1 kkchohcptk.wav 16;
+#X obj 17 46 sfile 0 player2 1 bass-simple.wav 16;
+#X obj 15 156 sfile 1 player2 1 bass-simple.wav 16;
+#X obj 496 216 sfile 5 player5 1 blippies.wav 13;
+#X obj 498 323 sfile 6 player5 1 blippies.wav 13;
+#X obj 499 433 sfile 7 player5 1 blippies.wav 13;
+#X obj 18 270 sfile 2 player2 2 bass-complex1.wav 16 bass-complex2.wav
+16;
+#X obj 22 374 sfile 3 player2 2 bass-complex1.wav 16 bass-complex2.wav
+16;
+#X obj 496 168 sfile 5 player2 2 bass-complex1.wav 16 bass-complex2.wav
+16;
+#X obj 498 275 sfile 6 player2 2 bass-complex1.wav 16 bass-complex2.wav
+16;
+#X obj 499 385 sfile 7 player2 2 bass-complex1.wav 16 bass-complex2.wav
+16;
+#X obj 496 184 sfile 5 player3 2 ride2.wav 18 ride3.wav 18;
+#X text 30 10 phase 0;
+#X text 23 122 phase 1;
+#X text 26 236 phase 2;
+#X text 34 341 phase 3;
+#X text 504 11 phase 4;
+#X text 508 137 phase 5;
+#X text 512 245 phase 6;
+#X text 510 347 phase 7;
+#X obj 496 28 sfile 4 player1 1 kkchohcptk.wav 16;
+#X obj 496 44 sfile 4 player2 2 bass-complex1.wav 16 bass-complex2.wav
+16;
+#X obj 496 60 sfile 4 player3 2 ride2.wav 18 ride3.wav 18;
+#X obj 496 92 sfile 4 player5 1 null 16;
+#X obj 22 390 sfile 3 player3 1 null 16;
+#X obj 498 259 sfile 6 player1 1 kk--ohcptk.wav 16;
+#X obj 499 369 sfile 7 player1 1 kkc2ohcptk.wav 16;
+#X obj 22 406 sfile 3 player4 1 organ.wav 32;
+#X obj 498 307 sfile 6 player4 1 organ.wav 32;
+#X obj 496 200 sfile 5 player4 1 organ.wav 32;
+#X obj 496 75 sfile 4 player4 1 organ.wav 32;

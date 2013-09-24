@@ -1,0 +1,162 @@
+#N canvas 219 87 928 551 10;
+#N canvas 77 321 497 180 MODULE_INFO 0;
+#X text 16 48 authors: Reality Jockey;
+#X text 15 98 decorator: s1m1-s2m1;
+#X text 16 28 name: Example;
+#X text 15 68 description: A module that includes descriptions of its
+structure and functionality.;
+#X text 15 117 tags: Example;
+#X restore 20 121 pd MODULE_INFO;
+#X obj 20 491 outlet~;
+#X obj 80 491 outlet~;
+#X obj 428 506 outlet;
+#X obj 428 282 inlet;
+#N canvas 128 22 665 374 \$0-DSP 0;
+#X obj 50 344 outlet~;
+#X obj 113 344 outlet~;
+#X obj 50 68 inlet~;
+#X text 158 45 The DSP section is the heart of any module. In it lies
+any audio signal processing or message handling. Input from the INPUT
+section and parameter information from the PARAMETER section are routed
+here to influence or control the output.;
+#X obj 103 180 r \$0-RJC_PARAM;
+#X obj 158 112 OVERVIEW;
+#X obj 50 258 e_reslop;
+#X msg 103 232 freq \$1;
+#X obj 103 206 m_scale 0 1 100 7000;
+#X text 215 173 This is the same send from the PARAMETER section. This
+will also be controlled by the RJC1000 interface.;
+#X text 224 111 Inside overview is the RJ Library Reference. This displays
+all the possible objects available to module creators including audio
+effects \, synths \, controllers and much more.;
+#X text 304 24 Do your DSP here;
+#X text 117 260 [e_reslop] is an example of one of the many object
+you can find in the RJ Library.;
+#X connect 2 0 6 0;
+#X connect 4 0 8 0;
+#X connect 6 0 0 0;
+#X connect 6 0 1 0;
+#X connect 7 0 6 1;
+#X connect 8 0 7 0;
+#X restore 20 411 pd \$0-DSP;
+#N canvas 170 22 780 720 \$0-PARAMETERS 0;
+#X obj 299 434 outlet;
+#X obj -48 15 s \$0-tick;
+#X obj -48 -204 inlet;
+#X obj 106 142 cnv 15 187 87 empty empty RJC_Parameters 10 12 1 14
+-162280 -262144 0;
+#X obj 106 116 cnv 15 187 20 empty empty Example 65 11 1 14 -261234
+-33289 0;
+#X obj 110 164 rjc_parameter_floatrange \$0 RJC_PARAM 0.5;
+#X obj 4 -30 s \$0-bpm;
+#X obj 57 -72 s \$0-rootnote;
+#X text 161 -73 The rootnote message here is recevied from the global
+parameters section of the RJC1000.;
+#X text 72 -33 The bpm message here is recevied from the global parameters
+section of the RJC1000.;
+#X text 123 -155 There is some specific information that the RJC1000
+sends to the modules. A module creator can choose to use this information
+or not. We use [route] to split these messages off and the right outlet
+of [route] holds the custom parameter information.;
+#X obj -48 -152 route tick bpm rootnote;
+#X text 26 10 The tick send outputs a counter that increases by one
+on every 32nd note. It is affected by the global bpm control. The [mod]
+object can be used to create synced loops.;
+#X text 123 -181 rootnote <midi value (0-127)>;
+#X text 9 -207 Inlet messages: tick <tick value (counter)>;
+#X text 302 98 You can add a parameter to the module by creating the
+[rjc_parameter_floatrange] object. You can set the parameter name \,
+default value and range (not currently available) by passing arguments
+through the object.;
+#X text 302 185 Currently we have only one parameter type (floatrange)
+however \, we intend to include more in future releases.;
+#X text 300 218 For an rjc_parameter to function correctly it has to
+be connected to the right inlet and outlet of a module (creating a
+direct connection to the RJC1000). This also means that a GUI parameter
+will be placed in the RJC1000 interface to control the rjc_parameter
+of the same name.;
+#X obj 299 318 rjc_parameter_floatrange \$0 Diasy-1 0.3;
+#X obj 299 353 rjc_parameter \$0 Diasy-2 0.6;
+#X obj 299 388 rjc_parameter_floatrange \$0 Diasy-3 0.9;
+#X text 298 289 It also worth pointing out that rjc_parameter objects
+can be daisy-chained e.g.;
+#X text 115 -256 The PARAMETER section organises messages sent from
+the RJC1000 and creates unique sends to be used within a module.;
+#X text -53 290 An rjc_parameter will automatically create a;
+#X text -53 310 example parameter 'RJC_PARAM' there will be a;
+#X text -53 320 send called '\$0-RJC_PARAM' \, try it out:;
+#X obj 41 343 r \$0-RJC_PARAM;
+#X floatatom 41 364 5 0 0 0 - - -;
+#X text -53 300 unique send to used within a module. So with the;
+#X text 123 -194 bpm <bpm value (50-300)> <number of ticks per beat>
+;
+#X text -50 66 IMPORTANT: Make sure all sends and any tables used are
+prepended with \$0 to ensure that the send stays within a module.;
+#X text 302 153 Note: the format for a rjc parameter must be the following:
+[rjc_parameter_*TYPE* \$0 *NAME* (+ additional ARG)];
+#X connect 2 0 11 0;
+#X connect 5 0 18 0;
+#X connect 11 0 1 0;
+#X connect 11 1 6 0;
+#X connect 11 2 7 0;
+#X connect 11 3 5 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 20 0 0 0;
+#X connect 26 0 27 0;
+#X coords 0 -1 1 1 199 135 1 100 100;
+#X restore 428 341 pd \$0-PARAMETERS;
+#N canvas 0 22 597 330 \$0-INPUT 0;
+#X obj 77 47 inlet~;
+#X obj 77 216 outlet~;
+#X obj 341 152 r #touch;
+#X obj 341 173 route swipe;
+#X obj 77 149 hip~ 1000;
+#X obj 77 170 lop~ 5000;
+#X obj 341 243 s \$0-Page_Number;
+#X text 143 46 The INPUT section deals with any necessary pre-processing
+of the input signal before being sent to the DSP section.;
+#X text 110 89 This section also initialises with any other input such
+as accelerometer information or touch which is then sent to other parts
+of the module.;
+#X text 113 279 IMPORTANT: If you want to use sends or tables within
+a module always prepend a \$0 to the name.;
+#X obj 209 153 m_accel_magnitude;
+#X obj 209 178 m_accel_pitch;
+#X obj 209 203 m_accel_roll;
+#X connect 0 0 4 0;
+#X connect 2 0 3 0;
+#X connect 3 0 6 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;
+#X coords 0 0 1 1 85 40 0;
+#X restore 20 331 pd \$0-INPUT;
+#X obj 20 267 inlet~ MIC;
+#X text 472 279 This is the parameter message inlet (it always has
+to be on the right-hand-side). Data from the RJC1000 is passed through
+here to be used in modules.;
+#X text 103 263 This inlet receives the audio input from a connected
+microphone.;
+#X text 130 91 The module info subpatch holds key information that
+is read by the RJC1000 to be displayed in the interface. It includes
+module name \, author \, description \, decorator type and tags.;
+#X text 129 145 The decorator type sets the number of audio/message
+inlets and outlets for the module. So s1m1-s2m1 would be:;
+#X text 129 175 1 audio inlet (s1) \, 1 message inlet (m1) \, 2 audio
+outlets (s2) and 1 message outlet (m1).;
+#X text 255 224 There are three sections to a module \, the INPUT section
+\, the PARAMETER section and the DSP section.;
+#X text 105 332 <-- Click on this object to open.;
+#X text 92 412 <-- Click on this object to open.;
+#X text 236 35 This patch outlines the structure and functionality
+of a module that is intended to be used in the RJC1000;
+#X text 331 17 RJC1000 MODULE DESCRIPTION;
+#X text 630 361 <-- To open \, right-click;
+#X text 657 371 then choose 'Open'.;
+#X text 740 14 Reality Jockey Ltd \, 2010;
+#X connect 4 0 6 0;
+#X connect 5 0 1 0;
+#X connect 5 1 2 0;
+#X connect 6 0 3 0;
+#X connect 7 0 5 0;
+#X connect 8 0 7 0;

@@ -1,0 +1,10 @@
+#N canvas 0 0 450 300 10;
+#X obj 125 85 netreceive 4554 1;
+#X obj 247 142 print FROM_PHONE;
+#X obj 138 115 route barkflux;
+#X obj 123 144 route sensor;
+#X floatatom 129 166 5 0 0 0 - - -;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 1 0;
+#X connect 3 0 4 0;

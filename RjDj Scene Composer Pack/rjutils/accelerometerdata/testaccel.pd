@@ -1,0 +1,100 @@
+#N canvas 365 251 770 474 10;
+#N canvas 469 264 756 567 acceldata 0;
+#X obj 100 407 outlet;
+#X obj 100 51 inlet;
+#X obj 182 337 textfile;
+#X msg 221 280 rewind;
+#X obj 182 280 until;
+#X obj 182 360 list;
+#X obj 130 229 moses;
+#X obj 130 200 + 1;
+#X obj 160 389 list;
+#X obj 160 251 t b a b;
+#X obj 160 410 outlet;
+#X obj 100 162 t a a;
+#X obj 288 224 loadbang;
+#X msg 288 254 clear \, add walking_around_with_iphone_in_pocket \,
+add twisting_x_axis \, add twisting_y_axis \, add twisting_z_axis \,
+add shaking_around \,;
+#X obj 105 116 nbx 31 14 0 4 0 0 empty empty empty 0 -8 0 10 -262144
+-1 -1 3 256;
+#X msg 317 191 range 0 4;
+#X obj 100 116 cnv 10 280 13 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X symbolatom 100 116 40 0 0 0 - - -;
+#X text 399 190 set number of data files here.;
+#X connect 1 0 14 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 0;
+#X connect 4 0 2 0;
+#X connect 5 0 8 1;
+#X connect 5 0 17 0;
+#X connect 6 1 9 0;
+#X connect 7 0 6 0;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 9 1 4 0;
+#X connect 9 2 3 0;
+#X connect 11 0 0 0;
+#X connect 11 1 7 0;
+#X connect 12 0 13 0;
+#X connect 12 0 15 0;
+#X connect 13 0 2 0;
+#X connect 14 0 11 0;
+#X connect 15 0 14 0;
+#X coords 0 -1 1 1 285 30 1 100 100;
+#X restore 227 77 pd acceldata;
+#N canvas 0 0 450 300 playdata 0;
+#X obj 75 182 qlist;
+#X obj 75 79 makefilename data%d.txt;
+#X msg 75 101 read \$1 \, bang;
+#X msg 87 151 tempo 0.25;
+#X obj 75 33 inlet;
+#X obj 107 209 outlet;
+#X obj 75 56 f;
+#X obj 175 183 spigot;
+#X obj 214 159 inlet;
+#X obj 175 162 b;
+#X text 263 162 loop;
+#X obj 138 33 inlet;
+#X msg 138 55 tempo \$1;
+#X connect 0 1 5 0;
+#X connect 0 1 9 0;
+#X connect 1 0 2 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 0;
+#X connect 4 0 6 0;
+#X connect 6 0 1 0;
+#X connect 7 0 6 0;
+#X connect 8 0 7 1;
+#X connect 9 0 7 0;
+#X connect 11 0 12 0;
+#X connect 12 0 0 0;
+#X restore 227 146 pd playdata;
+#X text 55 92 select movement type ->;
+#X obj 225 205 r #accelerate;
+#X obj 225 230 unpack 0 0 0;
+#X obj 225 265 vsl 15 128 -3 3 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6465 1;
+#X obj 265 265 vsl 15 128 -3 3 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 6542 1;
+#X obj 306 265 vsl 15 128 -3 3 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 3043 1;
+#X obj 321 126 tgl 15 0 empty empty loop 17 7 1 10 -262144 -1 -1 0
+1;
+#X obj 227 170 bng 15 250 50 0 empty empty end 17 7 1 10 -262144 -1
+-1;
+#X text 135 33 Test patch with recorded iPhone accelerometer data;
+#X text 76 126 bang to repeat ->;
+#X obj 208 126 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 264 126 5 0 200 2 tempo - -;
+#X connect 0 0 1 0;
+#X connect 1 0 9 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 1 6 0;
+#X connect 4 2 7 0;
+#X connect 8 0 1 2;
+#X connect 12 0 1 0;
+#X connect 13 0 1 1;

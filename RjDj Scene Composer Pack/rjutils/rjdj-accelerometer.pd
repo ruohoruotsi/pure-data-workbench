@@ -1,0 +1,44 @@
+#N canvas 263 383 258 264 10;
+#X obj 13 50 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 32 181 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 162 50 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X text 148 102 z;
+#X text 33 100 x;
+#X text 84 159 y;
+#X text 62 101 #accelerate;
+#N canvas 0 22 450 300 accelerometers 0;
+#X obj 99 26 inlet;
+#X obj 149 26 inlet;
+#X obj 199 26 inlet;
+#X obj 199 45 - 64;
+#X obj 199 63 / 32;
+#X obj 149 45 - 64;
+#X obj 149 63 / 32;
+#X obj 99 45 - 64;
+#X obj 99 63 / 32;
+#X obj 98 116 s #accelerate;
+#X obj 99 93 pack f f f;
+#X connect 0 0 7 0;
+#X connect 1 0 5 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 10 2;
+#X connect 5 0 6 0;
+#X connect 6 0 10 1;
+#X connect 7 0 8 0;
+#X connect 8 0 10 0;
+#X connect 10 0 9 0;
+#X restore 13 221 pd accelerometers;
+#X obj 32 33 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X text 83 52 all;
+#X text 11 10 Primitive accelerometer control;
+#X connect 0 0 7 0;
+#X connect 1 0 7 1;
+#X connect 2 0 7 2;
+#X connect 8 0 1 0;
+#X connect 8 0 0 0;
+#X connect 8 0 2 0;

@@ -1,0 +1,7 @@
+# mac specific build-excluded files
+Pd.app/Contents/Resources/portaudio
+Pd.app/Contents/Resources/portmidi
+Pd.app/Contents/Resources/src
+Pd.app/Contents/Resources/man
+Pd.app/Contents/Resources/obj
+Pd.app/Contents/Resources/doc

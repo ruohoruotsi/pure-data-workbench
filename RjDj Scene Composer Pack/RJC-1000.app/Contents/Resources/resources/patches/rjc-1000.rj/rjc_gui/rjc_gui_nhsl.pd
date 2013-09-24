@@ -1,0 +1,59 @@
+#N canvas 371 286 786 573 10;
+#X obj 102 294 m_scale 0 1 \$2 \$3;
+#X obj 102 101 m_scale \$2 \$3 0 1;
+#X obj 70 22 inlet;
+#X obj 102 77 route \$1;
+#X obj 102 56 list trim;
+#X msg 102 124 set \$1;
+#X obj 70 400 outlet;
+#X obj 102 342 list prepend \$1;
+#X obj 102 362 list trim;
+#X obj 102 148 s \$0-in;
+#X obj 102 273 r \$0-out;
+#X obj 115 318 r \$0-out-num;
+#N canvas 172 83 586 377 LICENSE-GPL 0;
+#X text 57 88 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version.;
+#X text 58 168 This program is distributed in the hope that it will
+be useful \, but WITHOUT ANY WARRANTY \; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.;
+#X text 57 261 You should have received a copy of the GNU General Public
+License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X text 61 54 Copyright (C) 2009 \, Reality Jockey Ltd.;
+#X text 60 325 See the file LICENSE.txt for the full license text.
+;
+#X restore 362 59 pd LICENSE-GPL;
+#X obj 165 77 s \$0-in-num;
+#X obj 101 201 cnv 15 177 28 empty empty empty 20 12 0 14 -191407 -66577
+0;
+#X obj 108 205 hsl 100 20 0 1 0 0 \$0-out \$0-in \$1 10 12 1 12 -129972
+-1 -262144 0 1;
+#X msg 512 175 set \$1;
+#X msg 513 274 set \$1;
+#X obj 215 205 nbx 5 20 -1e+37 1e+37 0 0 \$0-out-num \$0-in-num empty
+0 -8 1 12 -262144 -129972 -1 200 256;
+#X obj 513 252 m_scale 0 1 \$2 \$3;
+#X obj 512 156 m_scale \$2 \$3 0 1;
+#X connect 0 0 7 0;
+#X connect 1 0 5 0;
+#X connect 2 0 4 0;
+#X connect 2 0 6 0;
+#X connect 3 0 1 0;
+#X connect 3 0 13 0;
+#X connect 4 0 3 0;
+#X connect 5 0 9 0;
+#X connect 7 0 8 0;
+#X connect 8 0 6 0;
+#X connect 10 0 0 0;
+#X connect 11 0 7 0;
+#X connect 15 0 19 0;
+#X connect 16 0 15 0;
+#X connect 17 0 18 0;
+#X connect 18 0 20 0;
+#X connect 19 0 17 0;
+#X connect 20 0 16 0;
+#X coords 0 -1 1 1 179 30 2 100 200;

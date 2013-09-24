@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>IOhannes m zmoelnig</string>
+		<key>description</key>
+		<string>a scene on sines. move for noise. drag left (and right) for the blubbering...</string>
+		<key>name</key>
+		<string>IOscine</string>
+		<key>category</key>
+		<string>Sing</string>
+	</dict>
+</dict>
+</plist>

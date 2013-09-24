@@ -1,0 +1,25 @@
+#N canvas 82 16 1109 175 10;
+#N canvas 228 198 627 317 LICENSE-BSD 0;
+#X text 121 56 This software is copyrighted by Miller Puckette \, Reality
+Jockey Ltd. and others. The terms (the "Standard Improved BSD License")
+apply to all files associated with the software unless explicitly disclaimed
+in individual files.;
+#X text 123 148 See the file LICENSE.txt for the full license text.
+;
+#X restore 523 80 pd LICENSE-BSD;
+#N canvas 172 83 586 377 LICENSE-GPL 0;
+#X text 57 88 This program is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation \, either version 3 of
+the License \, or (at your option) any later version.;
+#X text 58 168 This program is distributed in the hope that it will
+be useful \, but WITHOUT ANY WARRANTY \; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.;
+#X text 57 261 You should have received a copy of the GNU General Public
+License along with this program. If not \, see <http://www.gnu.org/licenses/>.
+;
+#X text 61 54 Copyright (C) 2009 \, Reality Jockey Ltd.;
+#X text 60 325 See the file LICENSE.txt for the full license text.
+;
+#X restore 522 59 pd LICENSE-GPL;

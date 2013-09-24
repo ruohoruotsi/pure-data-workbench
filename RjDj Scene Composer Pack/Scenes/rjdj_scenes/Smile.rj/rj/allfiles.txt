@@ -1,0 +1,102 @@
++ g a_breath - breath controller that analyses the mic input volume
++ b c_adsr - ADSR envelope generator
++ b c_adsrj - ADSR envelope generator with GUI and preset
++ g c_cpfade - constant power crossfader
++ b c_drunk - output random numbers bound to a range (random walk)
++ b c_ead - exponential attack/decay envelope
++ g c_lfo - message rate LFO with various waveforms
++ b c_madsr - ADSR envelope generator for messages
++ b c_madsrj - ADSR envelope generator for messages with GUI and preset
++ g c_mphasor - message phasor for LFO generation
++ g c_multimetro - multi-period metro with builtin counter
++ g c_xfade - linear crossfader
++ g e_alias - downsample to alias a signal
++ b e_apdist - distort with a modulated allpass filter
++ g e_bitcrusher - reduce bit depth of a signal
++ g e_beequad - biquad filter with settable coeff. interpolation time
++ g e_chorus - chorus effect 
++ g e_chorusr - chorus effect after roland
++ g e_dynproc - dynamics processor: compressor noisegate limiter expander
++ g e_dubdel - beat synchronized pingpong or dub delay
++ g e_fbdelay - feedback delay line
++ g e_fbdelay2 - feedback delay line (stereo)
++ b e_freqshift - frequency shifter
++ g e_graindelread - granular delay reader
++ g e_lop2 - 2-pole resonant lowpass filter
++ g e_lop4 - 4-pole resonant lowpass filter
++ b e_pan - stereo panning (constant power)
++ b e_phaser - Phaser effect
++ g e_pingpong - Pingpong delay line
++ b e_pitchshift - pitch shifter
++ b e_platereverb - Griesinger style plate reverb
++ g e_repeater - repeat chunks of incoming signal
++ g e_reslop - resonant lowpass filter
++ b e_resonzq - 2-pole resonant bandpass filter
++ b e_reverb - simple reverb
++ g e_scompress - compressor with sidechain (can be used without as well)
++ g e_softclip - tube-like distortion (tanh)
++ g e_tremolo - simple tremolo
++ b e_vocoder - FFT vocoder
++ g g_channelstrip - mixer strip with GUI
++ g g_hradio - tagged horizontal radio button GUI
++ g g_hsl - tagged horizontal slider GUI
++ g g_hsl4 - four tagged horizontal sliders
++ g g_nbx - tagged number box GUI
++ g g_nhsl - tagged horizontal slider with number box
++ g g_showimage - show an image on the touchscreen
++ g g_showtext - show a list as text on the touchscreen
++ g g_symbol - tagged symbol GUI for text input
++ g g_tgl - tagged toggle GUI
++ g m_autoscale - scale numbers with a dynamically detected input range
++ g m_bpm2ms - convert between BPM frequency and periods in milliseconds
++ g m_keyfollow - apply keyboard following to filter frequencies
++ g m_majorscale - map numbers to a major scale
++ g m_scale - scale ranges
++ g m_speedlimit - impose upper limit on message speed
++ g m_touch2grid - map x y coordinates to a lower resolution grid
++ b s_blsaw - bandlimited saw wave
++ b s_blsquare - bandlimited square wave with PWM
++ b s_buzz - buzz harmonics generator
++ b s_drumelectro - electronic drums
++ g s_fmoscil - simple 2-operator FM
++ g s_fm4 - simple 4-operator FM unfinished!
++ g s_fplaytable - fast sample player for tables
++ g s_fplaytable2 - fast sample player for tables (stereo)
++ g s_guitar - karplus strong guitar
++ g s_looper - sample player with builtin sample loader 
++ g s_pinknoise - pinkish noise source
++ b s_playtable - sample player for tables with resampling
++ b s_playtable2 - sample player for tables with resampling (stereo)
++ g s_rhodey - FM emulation of rhodes e-piano
++ g s_osc - multi-waveform oscillator: sine saw square triangle
++ g u_bandpass1 - compute biquad coefficients for a bandpass filter (const skirt BW)
++ g u_bandpass1q - compute biquad coefficients for a bandpass filter (const skirt Q)
++ g u_bandpass2 - compute biquad coefficients for a bandpass filter (const peak BW)
++ g u_bandpass2q - compute biquad coefficients for a bandpass filter (const peak Q)
++ g u_channelstrip - mixing strip with two postfader sends
++ g u_cocollect - collect messages into a message and end each with a comma
++ g u_collect - collect messages into a message
++ b u_dispatch - dispatch messages by selector to local senders
++ g u_fade - remote fader control
++ g u_follower - follower for messages delivered at constant rate 
++ g u_highpass - compute biquad coefficients for a resonant highpass filter (BW)
++ g u_highpassq - compute biquad coefficients for a resonant highpass filter (Q)
++ b u_listdrip - serialise a list immediatly (i.e. list-drip)
++ b u_listfilter - filter a list (i.e. list-filter)
++ b u_listmap - map an operation to each list element (i.e. list-map)
++ b u_listnth - output the nth element of a list (i.e. list-nth)
++ b u_listreduce - reduce a list in pairs (i.e. list-reduce)
++ b u_listser - serialise a list on demand (i.e. list-dripslow)
++ b u_loadmeter - show CPU load
++ b u_loader - connect local state variables to global senders
++ g u_lowpass - compute biquad coefficients for a resonant lowpass filter (BW)
++ g u_lowpassq - compute biquad coefficients for a resonant lowpass filter (Q)
++ b u_makepoly - make midi-like instruments polyphonic
++ g u_record - record audio data into tables
++ b u_sssad
++ g u_samplebank - load files into tables
++ g u_samplebank2 - load stereo files into tables
++ g u_sigm - sigmoid function for messaging squashing
++ b u_splicetrans - transition splicer for bandlimiting jumps in waveforms
++ g u_spinner - select items from a list by a scaled index
++ g u_stereo - make stereo versions of effects

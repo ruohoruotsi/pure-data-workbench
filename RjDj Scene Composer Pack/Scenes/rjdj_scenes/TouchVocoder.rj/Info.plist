@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>Mobile Art &amp;&amp; Code</string>
+		<key>description</key>
+		<string>This scene uses sound input and modulates it like a good old brain machine. Listen to it and your brainpower will increase.</string>
+		<key>name</key>
+		<string>TouchVocoder</string>
+		<key>category</key>
+		<string>Sing</string>
+	</dict>
+</dict>
+</plist>

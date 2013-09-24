@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>Chris McCormick</string>
+		<key>bundleIdentifier</key>
+		<string>com.rj.template</string>
+		<key>description</key>
+		<string>Hum a tune, shake up some beats. Ride the Ghost Wave.</string>
+		<key>name</key>
+		<string>GhostWave</string>
+		<key>category</key>
+		<string>Sounds</string>
+	</dict>
+	<key>installLocation</key>
+	<string>GhostWave.rj</string>
+</dict>
+</plist>

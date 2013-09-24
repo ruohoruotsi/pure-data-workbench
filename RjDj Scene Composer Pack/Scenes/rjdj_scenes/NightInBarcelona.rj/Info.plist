@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>Enrique Erne</string>
+		<key>description</key>
+		<string>Night in Barcelona was created during one of our night sessions on a rooftop in Barcelona. It uses live input events and translates them into a minimal techno track.</string>
+		<key>name</key>
+		<string>Night in Barcelona</string>
+		<key>category</key>
+		<string>Listen</string>
+	</dict>
+</dict>
+</plist>

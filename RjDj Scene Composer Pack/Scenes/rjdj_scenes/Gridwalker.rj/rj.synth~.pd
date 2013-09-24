@@ -1,0 +1,16 @@
+#N canvas 330 43 668 440 10;
+#X obj 109 75 inlet;
+#X obj 251 74 inlet;
+#X obj 251 100 s NOTEDUR;
+#X msg 109 108 \$1 \$2;
+#X obj 109 227 soundoutput;
+#X obj 109 195 *~ 0.3;
+#X obj 182 195 *~ 0.3;
+#X obj 109 160 polypoly 10 1 voice~;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 3 0 7 0;
+#X connect 5 0 4 0;
+#X connect 6 0 4 1;
+#X connect 7 0 5 0;
+#X connect 7 1 6 0;

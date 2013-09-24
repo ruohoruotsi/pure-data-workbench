@@ -1,0 +1,6 @@
+#N canvas 140 76 1102 358 10;
+#X obj 848 100 bng 15 250 50 0 \$1-clear-bang empty empty 17 7 0 10
+-1 -258113 -99865;
+#X obj 100 100 bng 15 250 50 0 \$1-rand-bang empty empty -50 8 0 13
+-1 -258113 -262144;
+#X coords 0 -1 1 1 763 15 2 100 100;

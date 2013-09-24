@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>Nicholas Mariette</string>
+		<key>description</key>
+		<string>HeliumDemon plays with your voice as you tilt the phone.  Forwards and back pitches up and down, side to side adds vibrato.</string>
+		<key>name</key>
+		<string>HeliumDemon</string>
+		<key>category</key>
+		<string>Listen</string>
+	</dict>
+</dict>
+</plist>

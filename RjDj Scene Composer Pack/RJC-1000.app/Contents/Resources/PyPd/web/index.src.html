@@ -1,0 +1,22 @@
+<style>
+	body { font-family: "Arial"; color: #333333; width: 80%; margin-left: 10%; }
+	pre { margin-left: 2%; }
+</style>
+<body>
+<h1>PyPd</h1>
+<p>PyPd is a set of LGPLv3 Python classes for interfacing with the <a href='http://crca.ucsd.edu/~msp/software.html'>Pure Data</a> DSP patching system.</p>
+<p>Download the latest version: <a href="PyPd-<#version#>.tar.gz">PyPd-<#version#>.tar.gz</a></p>
+<p>or check out the sourcecode with <a href='http://bazaar-ng.org/'>bazaar</a>:</p>
+<code><pre>
+	<script>document.write("bzr co " + document.location.href)</script><noscript>bzr co + the URL in your browser window</noscript>
+</pre></code>
+<h2>Documentation</h2>
+<p><a href='Pd.html'>Pd.py</a> provides a cross platform way to launch Pd in a Python subprocess and communicate with it using sockets (netsend and netreceive), and stderr. Socket communications with Pd are accomplished by instantiating the [patches/python-interface] abstraction in your Pd patch to be loaded. Use the Send() method to send messages to Pd, and catch methods by overriding PdMessage(). You can also create methods to catch specific Pd messages using methods called Pd_xxx to catch all messages starting with the atom "xxx" for example.</p>
+<pre><code>
+<!--#include file="Pd_doc.txt" -->
+</pre></code
+<p><a href='PdParser.html'>PdParser.py</a> provides a way to parse Pd patches and extract information from them.</p>
+<pre><code>
+<!--#include file="PdParser_doc.txt" -->
+</pre></code>
+</body>

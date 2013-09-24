@@ -1,0 +1,11 @@
+RJC-1000 "$MARMALADE$" r$NUMBER$ $PLATFORM$
+by Reality Jockey Ltd
+http://rjdj.me
+
+RJC-1000 is composition software for reactive music. Get help or leave feedback on our website:
+http://more.rjdj.me/rjc1000/
+
+Contact Reality Jockey:
+info@rjdj.me
+
+RJC 1000 is based on Pure Data. See License Information in the Help menu for licenses and full credits.

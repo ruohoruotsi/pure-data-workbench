@@ -1,0 +1,74 @@
+<html><head></head><body>
+
+<h1>Demo Scenes</h1>
+<p>
+This page contains some simple RJDJ demo scenes designed to help new composers understand how to use microphone input, accelerometer input, sample playback and basic sequencing. 
+
+<h2>Microphone  Process 1 - delays</h2>
+<p>
+This scene provides an example of using audio effects with ambient input from the microphone.  
+<img src="./images/demo_delay.png" alt="Delay demo scene" />
+<p>
+Audio from the microphone input is picked up by the <b>soundinput</b> object. The audio signal is split to five delay objects in parallel, named <b>e_delay</b>. You can find <b>e_delay</b> objects in the rj-library. Each is set to a different delay time, so several copies of the incomming sound arrive at the <b>soundoutput</b>. Adjusting the volume control allows you to control the overall level of the effect. 
+<p>
+<b>Things to try</b>
+<ul>
+<li> Change the volume level. Save and reload the scene to your device. Notice how the scene remembers the new volume.
+<li> Change the values of the five delay times (modify the number following e_delay). Reload and listen to the modified scene.
+<li> Experiment with deleting or adding more e_delay objects. Experiment by adding other audio processing objects like a reverb or filter. 
+</ul>
+
+
+
+<h2>Microphone Trigger</h2>
+<p>
+This scene provides an example of triggering a sample when a transient/percussive sound is present at the microphone.  
+<img src="./images/demo_trigger.png" alt="Trigger demo scene" />
+<p>
+Sound from the microphone is processed by the object named <b>pd onset detection</b>. (This object is not in the library. However, it is made of other objects that are in the library, so you may like to open it and investigate further.) Whenever a sharp sound, like banging or a sudden noise is heard, it sends out a message that triggers the <b>pd play soundfiles</b> object. This will play back one of two sound files from the scene folder, choosing at random. The sounds are named <b>note_01.wav</b> and <b>note_02.wav</b> You can change these wav files to be anything you like. They should be mono with a sample rate of 22.5kHz and ideally quite short.
+<p>
+<b>Things to try</b>
+<ul>
+<li> Replace the sound files with your own.
+<li> Try adding more than two sound files (increase the range of the random selector too).
+<li> Open and investigate the onset detection, see if you can get the sounds to trigger for different kinds of microphone input.
+</ul>
+
+
+
+
+<h2>Accelerometer Switch</h2>
+<p>
+This scene provides an example of using audio effects with ambient input from the microphone.  
+<img src="./images/demo_accelswitch.png" alt="Accelerometer demo scene" />
+<p>
+A beat and bassline play as sample loops continuously. Depending on the position of the device you will hear a different mix of sample loops. Both sound file loops are handled by <b>pd playloops</b> and appear at the two outlets of that object. The mixing is done by <b>c_xfade</b>, which is a library object. It crossfades between its two inlets and sends the mix to its outlet. The object <b>pd angle</b> (this one has just two outlets) provides two triggers depending on the orientation of the iPhone/mp3player. These are used to trigger two messages which control the mix. 
+<p>
+<b>Things to try</b>
+<ul>
+<li> Replace the sound file loops with your own.
+<li> Try adding more than two loops and different mixes (modify the angle object to accomodate more loops).
+</ul>
+
+
+
+<h2>Microphone  Process 2 - vocoder</h2>
+<p>
+This scene provides a more advanced example, combining accelerometer data with audio input to create a controlled audio effect.
+<img src="./images/demo_voco.png" alt="Vocoder demo scene" />
+<p>
+The object named <b>pd angle</b> gives out messages on three outlets depending on whether the phone/mp3player is resting face down, on its back or in a middle position on its edge. Each of these triggers a message containing MIDI notes for a musical chord. The chord data feeds a simple polyphonic chord synthesiser <b>pd chord</b>, which produces four notes. The audio output from the chord synthesiser goes to one inlet of a vocoder, while the audio input from the microphone goes into the other vocoder inlet. The vocoder object is called <b>e_vocoder</b> and may be found in the <b>rj</b> libabry. It requires one argument, which is a unique name. The result of vocoding these signals together is sent to the sound output. 
+<p>
+<b>Things to try</b>
+<ul>
+<li> Change the MIDI note values in the chord messages to your own tastes.
+<li> Experiment by replacing the chord synthesiser with another signal source, maybe a sample loop. 
+<li> Modify the accelerometer sensor object to distinguish four or more positions and so add more chord states to the scene.
+</ul>
+
+<h2>Sequencing Melody</h2>
+<p>
+This scene provides an example of a basic list sequencer using MIDI note on values to play a monophonic synthesiser.
+
+
+</body></html>

@@ -1,0 +1,5 @@
+#N canvas 334 258 424 221 10;
+#X obj 28 118 outlet;
+#X obj 29 28 inlet;
+#X obj 56 74 print I'm_just_a_dummy_oggfiler;
+#X connect 1 0 2 0;

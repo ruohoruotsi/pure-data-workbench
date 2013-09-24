@@ -1,0 +1,80 @@
+Pd LAN Party
+------------
+
+Copyright Chris McCormick, 2009.
+
+This is a client-server system for associating Pd patches (Or RjDj scenes) with
+eachother on the local area network, or wifi network automatically.
+
+This is a fork of [PodSixNet](http://mccormick.cx/projects/PodSixNet/), made possible thanks to the support of [RjDj](http://rjdj.me/).
+
+Start the server lanparty.py from the command line like this:
+
+	python lanparty.py
+
+Then put the object [lanparty] into your patch. Any message into the [lanparty]
+object will be replicated to all other connected patches on the network at the
+outlet of their [lanparty] object. See the help file for an example use.
+
+Get the code here:
+
+	bzr co http://mccormick.cx/dev/PdLANParty/
+
+License
+-------
+
+Licensed under the terms of the LGPL v3.0 or higher.
+See the file [COPYING](COPYING) for details.
+
+Advanced use
+------------
+
+If you want to make more complicated servers than a simple echo of all messages
+to all [lanparty] objects, you can use the PdLANParty class in your own code
+as follows.
+
+Set up a new PdLANServer object:
+
+	p = PdLANParty() # create the server
+	p.Launch() # launch the server off in a separate thread
+
+Use the PdLANServer object to communicate with all patches. Something like this
+should go in your main-loop:
+
+	p.PostMessage(['drum', '5', 'bang'])	# send a message to all connected patches
+	p.GetMessages() # get an array of arrays containing messages from clients
+	# the first element of the arrays from GetMessages will be the client ID
+	p.PostMessageTo(id, ['drum', '5', 'bang']) # send a message to client with id
+
+You can also send and receive UDP messages to and from lanparty's right inlet
+and outlet. This is useful for timing data or other lossy data which is quickly
+updated and not delivery-critical.
+
+	p.GetUDPMessages() # returns an array of all UDP messages
+	p.PostUDPMessage(['x', 'y', 12]) # posts a broadcast UDP message to all clients
+
+Here is an example of what kind of data will be sent and received:
+
+	Pd Client connects
+	Server receives: ['connected', '1']
+	Pd Client receives: server ip 192.168.2.113;
+	Pd Client receives: server id 1;
+	Server sends: ['drum', '5', 'bang']
+	Pd Client receives: drum 5 bang;
+	Pd Client sends: this is my test;
+	Server receives: ['this', 'is', 'my', 'test']
+
+Here's what the default main-loop in lanparty.py looks like. It is an echo
+server, and sends all messages it receives from any client, back to all clients
+(one-to-many messaging).
+
+	p = PdLANParty()
+	p.Launch()
+	try:
+		while 1:
+			[p.PostMessage(m) for m in p.GetMessages()]
+			sleep(0.001)
+	except KeyboardInterrupt:
+		exit(0)
+
+If you want to make your own server which does more complicated things than echoing back all received messages, or sending messages only to specific clients, you can use PdLANParty similarly to do what you want.

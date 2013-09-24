@@ -1,0 +1,23 @@
+#N canvas 291 155 777 415 10;
+#X obj 242 188 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144
+-1 -1 1;
+#X msg 250 216 wav;
+#X msg 283 216 ogg;
+#X text 90 36 oggsoundfiler - wrapper around soundfiler and oggfiler
+;
+#X text 113 68 Accepts "read -resize" messages just like [soundfiler].
+In "ogg"-mode it will append ".ogg" to the filename and route the command
+to RjDj's oggfiler.;
+#X msg 154 137 read -resize filenotfound.wav MYTABLE;
+#X obj 444 203 table MYTABLE;
+#X floatatom 154 276 5 0 0 0 - - -;
+#X obj 444 232 table MYTABLE-1;
+#X obj 445 254 table MYTABLE-2;
+#X msg 165 160 read -resize stereo.wav MYTABLE-1 MYTABLE-2;
+#X obj 154 256 oggsoundfiler;
+#X connect 0 0 11 1;
+#X connect 1 0 11 1;
+#X connect 2 0 11 1;
+#X connect 5 0 11 0;
+#X connect 10 0 11 0;
+#X connect 11 0 7 0;

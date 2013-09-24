@@ -1,0 +1,66 @@
+#N canvas 0 22 1168 711 10;
+#X msg 287 205 freq \$1;
+#X obj 287 183 / 100;
+#X obj 290 160 hsl 128 15 0 127 0 0 empty empty frequency -2 -8 1 10
+-262144 -1 -1 1700 1;
+#X obj 335 259 / 100;
+#X obj 338 239 hsl 128 15 0 127 0 0 empty empty depth -2 -8 1 10 -262144
+-1 -1 9100 1;
+#X msg 335 281 depth \$1;
+#X obj 206 349 e_phaser ph;
+#X obj 208 102 catch~ ibus1;
+#X obj 206 383 throw~ obus1;
+#X obj 537 92 catch~ ibus2;
+#X obj 540 422 throw~ obus2;
+#X obj 781 11 vsl 15 100 0 100 0 0 empty empty q_(peakiness) 0 -9 1
+10 -262144 -1 -1 0 1;
+#X floatatom 798 141 5 0 0 0 - - -;
+#X obj 666 10 vsl 15 128 0 100 0 0 empty empty lowpass_frequency 0
+-9 1 10 -262144 -1 -1 0 1;
+#X obj 666 151 mtof;
+#X floatatom 680 174 8 0 0 0 - - -;
+#X obj 859 135 hsl 50 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 856 155 5 0 0 0 - - -;
+#X msg 856 172 dry \$1;
+#X text 857 192 default is dry=0 i.e. fully wet;
+#X obj 536 255 e_reslop mylop 2000;
+#X msg 666 202 freq \$1;
+#X msg 780 171 q \$1;
+#X msg 818 112 10;
+#X obj 850 62 loadbang;
+#X msg 620 173 0;
+#X obj 581 157 r ebus2;
+#X floatatom 560 193 5 0 0 0 - - -;
+#X obj 604 224 + 643;
+#X obj 599 202 * 400;
+#X obj 587 177 - 1;
+#X connect 0 0 6 1;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 0;
+#X connect 5 0 6 1;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 9 0 20 0;
+#X connect 11 0 22 0;
+#X connect 11 0 12 0;
+#X connect 13 0 14 0;
+#X connect 14 0 21 0;
+#X connect 14 0 15 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 18 0 20 1;
+#X connect 20 0 10 0;
+#X connect 21 0 20 1;
+#X connect 22 0 20 1;
+#X connect 23 0 22 0;
+#X connect 24 0 25 0;
+#X connect 24 0 23 0;
+#X connect 25 0 29 0;
+#X connect 26 0 27 0;
+#X connect 26 0 30 0;
+#X connect 28 0 21 0;
+#X connect 29 0 28 0;
+#X connect 30 0 29 0;

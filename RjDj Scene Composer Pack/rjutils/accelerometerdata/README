@@ -1,0 +1,29 @@
+This directory contains several recordings of accelerometer data obtained from
+an iPhone and stored as sequences for Pd's [qlist] object.
+
+Also some Pd patches to play back and visualise the data are included. 
+
+Accelerometer data: 
+
+data0.txt: walking around with iphone in pocket
+data1.txt: twisting x axis
+data2.txt: twisting y axis
+data3.txt: twisting z axis
+data4.txt: shaking around
+
+Main abstractions:
+
+testaccel.pd: playback the files from above, optionally looped and with various
+    speeds.
+
+accelvis.pd: rough Gem visualisation of the iPhone position.
+
+Helper abstractions: 
+
+readdata.pd: reads a data file into qlist and plays it back.
+showdata.pd: three sliders to view x, y and z accelerations.
+ipodmodel.pd: Crude Gem model of an iPod/iPhone
+integrate.pd: running sum of 10 float values, scaled by 1/10
+integ2.pd: integrate twice with with integrate.pd
+
+Authors: Guenter Geiger, Frank Barknecht, Paul Brossier and probably others.

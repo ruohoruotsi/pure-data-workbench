@@ -1,0 +1,12 @@
+#N canvas 333 240 450 300 10;
+#X obj 99 65 inlet;
+#X obj 99 211 outlet;
+#X obj 121 99 print module-1m-1m;
+#X obj 99 131 b;
+#X obj 99 156 random 10;
+#X obj 99 183 list prepend module-1m-1m;
+#X connect 0 0 2 0;
+#X connect 0 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;

@@ -1,0 +1,13 @@
+#N canvas 438 367 450 300 10;
+#X obj 76 25 r #accelerate;
+#X obj 77 50 unpack 0 0 0;
+#X obj 77 85 vsl 15 128 -3 3 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 118 85 vsl 15 128 -3 3 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 159 86 vsl 15 128 -3 3 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 1 1 3 0;
+#X connect 1 2 4 0;

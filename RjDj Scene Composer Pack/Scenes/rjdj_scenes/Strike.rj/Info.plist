@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>Amaury Hazan</string>
+		<key>description</key>
+		<string>Little hip hop symphony. The more and the longer you shake the more you get. Shake left/right for scratching, touch the screen to trigger samples. More controls to discover. Audio samples from freesound.org and soundsnap.com.
+The creative commons attributions are listed below:
+
+splintered brain 3.wav (http://www.freesound.org/samplesViewSingle.php?id=31648)
+                         
+Fires of frustration.wav (http://www.freesound.org/samplesViewSingle.php?id=33566)
+
+Hiroshima.wav (http://www.freesound.org/samplesViewSingle.php?id=31644)
+                                                         
+ExcessiveExposure.wav (http://www.freesound.org/samplesViewSingle.php?id=33711)
+                                                                                         
+G.W.Bush - An empire of oppression.wav (http://www.freesound.org/samplesViewSingle.php?id=15376)
+
+    </string>
+		<key>name</key>
+		<string>Strike</string>
+		<key>category</key>
+		<string>Shake</string>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>Damian Stewart</string>
+		<key>name</key>
+		<string>Beaker</string>
+		<key>description</key>
+		<string>A beaker of quiet. Catches quiet sounds from the microphone input and, when the beaker is full, pours them gently out again. Take it out for a walk.</string>
+		<key>category</key>
+		<string>Walk</string>
+	</dict>
+</dict>
+</plist>

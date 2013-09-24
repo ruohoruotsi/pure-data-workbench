@@ -1,0 +1,21 @@
+#N canvas 692 379 402 281 10;
+#X obj 38 133 d-random-fibo 10;
+#X floatatom 38 167 5 0 0 0 - - -;
+#X obj 38 102 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 22 -31 d-random-fibo;
+#X text 22 -20 -------------;
+#X text 19 1 output a random integer between 0 and \$1 with Fibonacci-
+based distribution: the nth Fibonacci number is the inverse of the
+probability that that number will appear. 0 and 1 have a relative probability
+of 1 \; 2 has a relative probability of 1/(1+1) \; 3 has relative probability
+of 1/(1+1+2) \; etc;
+#X text 287 142 part of dlib;
+#X text 76 208 released under the GNU General Public License v3+;
+#X text 194 169 copyright damian stewart 2008;
+#X text 165 183 damian@frey.co.nz | www.frey.co.nz;
+#X floatatom 131 101 5 0 0 0 - - -;
+#X text 171 98 set range;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 10 0 0 1;

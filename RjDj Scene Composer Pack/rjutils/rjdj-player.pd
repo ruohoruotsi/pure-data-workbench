@@ -1,0 +1,17 @@
+#N canvas 953 195 427 291 10;
+#X obj 157 125 recorder;
+#X obj 17 103 s #transport;
+#X msg 17 81 play \$1;
+#X obj 17 46 tgl 30 0 empty empty empty 17 7 0 10 -4034 -258113 -1
+0 1;
+#X text 52 51 play/stop;
+#X obj 157 103 s #transport;
+#X obj 157 46 tgl 30 0 empty empty empty 17 7 0 10 -258113 -260097
+-1 0 1;
+#X text 192 51 record;
+#X msg 157 81 record \$1;
+#X text 12 14 Transport control for RjDj scenes;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 6 0 8 0;
+#X connect 8 0 5 0;

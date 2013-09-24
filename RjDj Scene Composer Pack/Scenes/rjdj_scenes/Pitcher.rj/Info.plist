@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>Damian Stewart</string>
+		<key>name</key>
+		<string>Pitcher</string>
+		<key>description</key>
+		<string>A pitcher of loud. Collects loud sounds from the microphone input and, when the pitcher is full, pours them out again.</string>
+		<key>category</key>
+		<string>Walk</string>
+	</dict>
+</dict>
+</plist>

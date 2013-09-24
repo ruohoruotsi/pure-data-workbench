@@ -1,0 +1,9 @@
+#N canvas 0 0 774 408 10;
+#X obj 159 111 u_loader \$2-\$3 \$1;
+#X text 349 47 arg1: \$0;
+#X text 349 69 arg2: <name-of-module>;
+#X text 349 91 arg3: unique tag (optional);
+#X obj 159 81 inlet;
+#X obj 159 140 outlet;
+#X connect 0 0 5 0;
+#X connect 4 0 0 0;

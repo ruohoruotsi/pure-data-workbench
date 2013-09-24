@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>Frank Barknecht</string>
+		<key>description</key>
+        <string>This scene tests rj_text input. It doesn't generate any sound.</string>
+		<key>name</key>
+		<string>Showtime</string>
+		<key>category</key>
+		<string>Feel</string>
+	</dict>
+	<key>installLocation</key>
+	<string>Showtime.rj</string>
+</dict>
+</plist>

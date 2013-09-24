@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>Gunter Geiger</string>
+		<key>description</key>
+		<string>Echolon is where you are. It transforms your environment into music. This scene uses sound input and pitches and shifts it all around you, creating a new listening experience.</string>
+		<key>name</key>
+		<string>Walk the Bass</string>
+		<key>category</key>
+		<string>Sing</string>
+	</dict>
+</dict>
+</plist>

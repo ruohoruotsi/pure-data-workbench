@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46"
+   sodipodi:docname="rjdj-spacebox.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/Users/enriqueerne/Desktop/test.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3332">
+      <stop
+         style="stop-color:#9b0000;stop-opacity:1;"
+         offset="0"
+         id="stop3334" />
+      <stop
+         style="stop-color:#f01313;stop-opacity:1;"
+         offset="1"
+         id="stop3336" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2493">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2495" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="1"
+         id="stop2497" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective2481"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2493"
+       id="linearGradient3314"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.9150917,0,0,1.0927867,5.0330042,-1.0927867)"
+       x1="133"
+       y1="187.40977"
+       x2="133"
+       y2="145.36218" />
+    <mask
+       maskUnits="userSpaceOnUse"
+       id="mask3310">
+      <rect
+         style="opacity:1;fill:url(#linearGradient3314);fill-opacity:1;stroke:none;stroke-width:2.79999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3312"
+         width="315.70663"
+         height="45.897041"
+         x="-5.0330043"
+         y="157.75706"
+         transform="scale(1,-1)" />
+    </mask>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3332"
+       id="linearGradient3338"
+       x1="166"
+       y1="215.3849"
+       x2="166"
+       y2="193.36218"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.7727273,0,83.945951)" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="81.210938"
+     inkscape:cy="851.72069"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1115"
+     inkscape:window-height="702"
+     inkscape:window-x="61"
+     inkscape:window-y="5" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <image
+       y="15.641495"
+       x="223.21094"
+       id="image2483"
+       height="94.842102"
+       width="91.627121"
+       sodipodi:absref="/Users/enriqueerne/Pictures/nonfree/starburst.gif"
+       xlink:href="nonfree/starburst.gif" />
+    <rect
+       style="opacity:1;fill:url(#linearGradient3338);fill-opacity:1;stroke:none;stroke-width:2.79999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2389"
+       width="322"
+       height="17"
+       x="0"
+       y="233.36218" />
+    <text
+       xml:space="preserve"
+       style="font-size:32.03403854px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Helvetica Rounded;-inkscape-font-specification:Helvetica Rounded Bold"
+       x="10.004132"
+       y="294.61639"
+       id="text2391"
+       transform="scale(1.196426,0.8358227)"><tspan
+         sodipodi:role="line"
+         id="tspan2393"
+         x="10.004132"
+         y="294.61639"
+         style="font-size:14.23735142px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'.Aqua Kana Bold';-inkscape-font-specification:'.Aqua Kana Bold, Semi-Bold'">Warning! Use at your own risk!</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:57.69637299px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Helvetica Rounded;-inkscape-font-specification:Helvetica Rounded Bold"
+       x="1.8356653"
+       y="157.9572"
+       id="text2383"
+       transform="scale(1.0927867,0.9150917)"><tspan
+         sodipodi:role="line"
+         id="tspan2385"
+         x="1.8356653"
+         y="157.9572"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;fill:#000000;font-family:'.Aqua Kana';-inkscape-font-specification:'.Aqua Kana Light'">SPACEbox</tspan></text>
+    <text
+       transform="matrix(1.0927867,0,0,-0.7135362,0,31.922209)"
+       id="text2487"
+       y="-159.19623"
+       x="1.8356704"
+       style="font-size:57.69637299px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;opacity:0.38000039;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Helvetica Rounded;-inkscape-font-specification:Helvetica Rounded Bold"
+       xml:space="preserve"
+       mask="url(#mask3310)"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;fill:#000000;font-family:'.Aqua Kana';-inkscape-font-specification:'.Aqua Kana Light'"
+         y="-159.19623"
+         x="1.8356704"
+         id="tspan2489"
+         sodipodi:role="line">SPACEbox</tspan></text>
+    <rect
+       style="opacity:1;fill:#ff6600;fill-opacity:1;stroke:none;stroke-width:2.79999995;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3340"
+       width="133.1438"
+       height="12.773944"
+       x="-39.482803"
+       y="39.693348"
+       transform="matrix(0.8660254,-0.5,0.5,0.8660254,0,0)" />
+    <text
+       xml:space="preserve"
+       style="font-size:17.68699837px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#ffe6d5;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Helvetica Rounded;-inkscape-font-specification:Helvetica Rounded Bold"
+       x="-13.054177"
+       y="49.84782"
+       id="text3342"
+       transform="matrix(0.8660254,-0.5,0.5,0.8660254,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3344"
+         x="-13.054177"
+         y="49.84782"
+         style="font-size:11.7913332px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:'.Aqua Kana Bold';-inkscape-font-specification:'.Aqua Kana Bold, Semi-Bold'">Version 1.0</tspan></text>
+  </g>
+</svg>

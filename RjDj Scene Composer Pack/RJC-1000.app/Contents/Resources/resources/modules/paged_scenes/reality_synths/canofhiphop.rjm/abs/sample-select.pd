@@ -1,0 +1,27 @@
+#N canvas 534 80 450 300 10;
+#X obj 11 120 sel 1;
+#X obj 11 10 inlet;
+#X obj 11 52 mod 16;
+#X obj 50 31 r \$1-loop-length;
+#X obj 11 141 symbol \$2;
+#X msg 11 264 \; \$2-\$1-shot bang \;;
+#X obj 64 190 \$1;
+#X obj 11 218 pack s f;
+#X obj 11 163 t s b;
+#X obj 11 98 tabread \$1-\$2-loop;
+#N canvas 495 241 450 300 (subpatch) 0;
+#X array \$1-\$2-loop 32 float 3;
+#A 0 1 0 1 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0
+0;
+#X coords 0 1 32 -1 50 25 1;
+#X restore 90 65 graph;
+#X connect 0 0 4 0;
+#X connect 1 0 2 0;
+#X connect 2 0 9 0;
+#X connect 3 0 2 1;
+#X connect 4 0 8 0;
+#X connect 6 0 7 1;
+#X connect 7 0 5 0;
+#X connect 8 0 7 0;
+#X connect 8 1 6 0;
+#X connect 9 0 0 0;

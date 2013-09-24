@@ -1,0 +1,3 @@
+# don't include these lines in the final build
+resources/modules/dev
+resources/historical

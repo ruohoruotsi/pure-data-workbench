@@ -1,0 +1,33 @@
+#N canvas 258 68 469 430 10;
+#N canvas 404 176 527 319 MODULE_INFO 0;
+#X text 64 79 authors: Reaity Jockey;
+#X text 65 99 description: All this module does is adding the microphone
+signal to the mix. So if you want people to sing along your scene and
+record it \, thats what you need.;
+#X text 65 150 decorator: s1m1-s2m1;
+#X text 66 175 tags:;
+#X text 66 57 name: Mic-through;
+#X restore 26 28 pd MODULE_INFO;
+#X obj 27 88 inlet~ MIC;
+#X obj 28 344 outlet~;
+#X obj 88 344 outlet~;
+#N canvas 551 67 254 414 \$0-INPUT 0;
+#X obj 77 47 inlet~;
+#X obj 77 283 outlet~;
+#X obj 77 245 *~ 0.7;
+#X obj 77 177 hip~ 100;
+#X obj 77 206 lop~ 3000;
+#X obj 77 152 hip~ 100;
+#X connect 0 0 5 0;
+#X connect 2 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 3 0;
+#X coords 0 0 1 1 85 40 0;
+#X restore 27 141 pd \$0-INPUT;
+#X obj 158 87 inlet;
+#X obj 157 345 outlet;
+#X connect 1 0 4 0;
+#X connect 4 0 2 0;
+#X connect 4 0 3 0;
+#X coords 0 0 1 1 85 60 0;

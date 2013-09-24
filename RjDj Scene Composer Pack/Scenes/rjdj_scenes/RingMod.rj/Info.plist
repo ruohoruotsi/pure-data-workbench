@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>Gunter Geiger</string>
+		<key>description</key>
+		<string>Sometimes your environment is distorted, uncomprehensible, but then you start to see the structure. This scene uses sound input, modulates it and throws it back to you.</string>
+		<key>name</key>
+		<string>RingMod</string>
+		<key>category</key>
+		<string>Sing</string>
+	</dict>
+</dict>
+</plist>

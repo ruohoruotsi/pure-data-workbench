@@ -1,0 +1,17 @@
+#N canvas 332 22 331 175 10;
+#X obj 17 67 r~ 1-nothing;
+#X obj 117 67 r~ 1-nothing;
+#X obj 17 47 r \$1-\$2L-r;
+#X obj 117 47 r \$1-\$2R-r;
+#X obj 17 127 s~ \$1-\$2L;
+#X obj 117 127 s~ \$1-\$2R;
+#X msg 210 17 version 0.3.0;
+#X obj 37 97 r~ mx2mMm-L;
+#X obj 137 97 r~ mx2mMm-R;
+#X obj 17 17 mmm-module \$1 \$2 mx2mMm 0;
+#X connect 0 0 4 0;
+#X connect 1 0 5 0;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X connect 7 0 4 0;
+#X connect 8 0 5 0;

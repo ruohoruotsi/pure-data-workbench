@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>Roman Haefeli</string>
+		<key>description</key>
+        <string>This scene uses pd_send to send accelerometer data and screen
+        touches to your computer. Use rjutils/get_sensors.pd to connect to the phone
+        and receive data on your computer.</string>
+		<key>name</key>
+		<string>zzSendSensors</string>
+		<key>category</key>
+		<string>Test</string>
+	</dict>
+	<key>installLocation</key>
+	<string>zzSendSensors.rj</string>
+</dict>
+</plist>

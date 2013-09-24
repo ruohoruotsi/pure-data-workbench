@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>RjDj</string>
+		<key>category</key>
+		<string>Interactive</string>
+		<key>description</key>
+		<string>This scene uses sends accelerometer, touch, gyroscope, compass, time and location  data to your computer. Use get_sensor.pd to connect to the phone and receive the data.</string>
+		<key>name</key>
+		<string>send_sensor</string>
+	</dict>
+</dict>
+</plist>

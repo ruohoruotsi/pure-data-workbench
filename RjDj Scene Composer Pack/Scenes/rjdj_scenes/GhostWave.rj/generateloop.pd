@@ -1,0 +1,9 @@
+#N canvas 46 287 450 300 10;
+#X obj 326 8 table \$1-loop 16;
+#X obj 13 10 inlet;
+#X obj 13 32 symbol \$1;
+#X obj 883 225 readloop bd;
+#X msg 13 54 \; \$1-makeloop bang \;;
+#X obj 13 90 makeloop \$1;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;

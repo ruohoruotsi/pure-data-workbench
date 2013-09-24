@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>Christian Haudej</string>
+		<key>bundleIdentifier</key>
+		<string>com.rj.MyFantasyGame.Com</string>
+		<key>description</key>
+		<string>walk your way through the scene, or remain and listen to the altered environment (microphone required!).</string>
+		<key>name</key>
+		<string>MyFantasyGame.Com</string>
+		<key>category</key>
+		<string>Shake</string>
+	</dict>
+	<key>installLocation</key>
+	<string>MyFantasyGame.Com.rj</string>
+</dict>
+</plist>

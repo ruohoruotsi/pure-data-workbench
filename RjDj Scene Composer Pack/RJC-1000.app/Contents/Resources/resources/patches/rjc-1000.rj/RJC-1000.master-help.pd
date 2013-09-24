@@ -1,0 +1,184 @@
+#N canvas 0 0 841 385 10;
+#N canvas 566 285 714 677 audio-routing-DOCS 0;
+#X obj 181 77 r~ RJC1000-S-IN;
+#X obj 186 148 catch~ \$1-S-IN;
+#X text 125 53 Every mono module has a r~ for a global mono audio in:
+;
+#X text 124 109 Every mono module also has a catch~ for its personal
+mono audio in called "\$1-S-IN";
+#X text 123 209 Every stereo module has two r~ for global audio ins
+\, named like the global mono receive~ but with 0 and 1 attached:;
+#X obj 164 258 r~ RJC1000-S-IN-0;
+#X obj 311 258 r~ RJC1000-S-IN-1;
+#X text 123 294 Same for the personal inputs:;
+#X obj 167 329 catch~ \$1-S-IN-0;
+#X obj 313 326 catch~ \$1-S-IN-1;
+#X text 36 19 AUDIO INPUTS - Signals going to the modules;
+#X text 49 386 AUDIO OUTPUT - signals coming from the modules;
+#X obj 148 440 throw~ RJC1000-S-OUT;
+#X obj 182 503 s~ \$1-S-OUT;
+#X text 126 581 Personal stereo in every module constructed from argument:
+;
+#X obj 141 557 throw~ RJC1000-S-OUT-0;
+#X obj 314 556 throw~ RJC1000-S-OUT-1;
+#X obj 168 607 s~ \$1-S-OUT-0;
+#X obj 308 607 s~ \$1-S-OUT-1;
+#X text 131 413 Global mono in every mono module:;
+#X text 124 530 Stereo global mono in every stereo module:;
+#X text 134 463 Personal mono in every mono module constructed from
+argument:;
+#X restore 91 108 pd audio-routing-DOCS;
+#N canvas 108 55 974 730 controls-docs 0;
+#X obj 55 515 s RJC1000-M-IN;
+#X floatatom 55 436 5 0 0 0 - - -;
+#X obj 55 491 list trim;
+#X obj 55 465 list prepend TEST1 0;
+#X text 207 466 tag and inlet-id;
+#X obj 70 596 r RJC1000-M-OUT;
+#X obj 70 625 print OUT;
+#X obj 452 115 s RJC1000-M-IN;
+#X floatatom 452 36 5 0 0 0 - - -;
+#X obj 452 91 list trim;
+#X text 605 64 tag and inlet-id;
+#X obj 452 65 list prepend TEST2 1;
+#X obj 376 511 s RJC1000-M-IN;
+#X floatatom 376 432 5 0 0 0 osc-midi - -;
+#X obj 376 487 list trim;
+#X obj 376 461 list prepend TEST4 0;
+#X obj 414 305 s RJC1000-M-IN;
+#X obj 414 281 list trim;
+#X obj 414 228 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 414 255 list prepend switch TEST4;
+#X msg 48 256 switch TEST1 \$1 \, switch TEST2 \$1 \, switch TEST3
+\$1;
+#X obj 48 278 s RJC1000-M-IN;
+#X obj 48 235 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 47 190 s RJC1000-M-IN;
+#X obj 47 147 tgl 15 0 empty empty empty 17 7 0 10 -204786 -1 -1 0
+1;
+#X msg 47 168 switch ALL \$1;
+#X obj 569 533 s RJC1000-M-IN;
+#X floatatom 569 454 5 0 0 0 - - -;
+#X obj 569 509 list trim;
+#X obj 569 483 list prepend TEST5 0;
+#X obj 572 431 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 665 273 s RJC1000-M-IN;
+#X obj 665 230 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 665 252 switch TEST5 \$1;
+#X obj 41 36 s RJC1000-M-IN;
+#X text 38 16 Messages to all decorators are sent to:;
+#X text 38 68 By default \, all modules are off (message and dsp).
+;
+#X msg 41 92 switch <target> 0/1;
+#X text 189 94 messages switch them on.;
+#X text 47 214 Else use the first argument to select the target:;
+#X text 49 341 When switched on \, modules accept further messages
+using this format:;
+#X msg 55 374 <target> <inlet-id> <data ...>;
+#X text 55 397 Inlet numbering starts at 0 for each message inlet.
+Examples:;
+#X text 57 567 Receiving messages:;
+#X msg 398 597 dry 0.2 \, bq 2 \, basedur 500 \, bpitch 83 \, feedback
+0.99 \, dell 2 \, delr 3 \,;
+#X obj 398 684 s RJC1000-M-IN;
+#X obj 398 660 list trim;
+#X obj 571 683 s RJC1000-M-IN;
+#X obj 571 640 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 398 634 list prepend DUBDEL 0;
+#X msg 571 662 switch DUBDEL \$1;
+#X obj 641 383 s RJC1000-M-IN;
+#X obj 641 335 c_multimetro 0 200;
+#X obj 641 314 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 759 384 TODO: Send something to ALL;
+#X text 33 122 "switch" target "ALL" is special to switch everything
+on:;
+#X msg 641 362 ALL 0 tick \$1;
+#X connect 1 0 3 0;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X connect 5 0 6 0;
+#X connect 8 0 11 0;
+#X connect 9 0 7 0;
+#X connect 11 0 9 0;
+#X connect 13 0 15 0;
+#X connect 14 0 12 0;
+#X connect 15 0 14 0;
+#X connect 17 0 16 0;
+#X connect 18 0 19 0;
+#X connect 19 0 17 0;
+#X connect 20 0 21 0;
+#X connect 22 0 20 0;
+#X connect 24 0 25 0;
+#X connect 25 0 23 0;
+#X connect 27 0 29 0;
+#X connect 28 0 26 0;
+#X connect 29 0 28 0;
+#X connect 30 0 27 0;
+#X connect 32 0 33 0;
+#X connect 33 0 31 0;
+#X connect 44 0 49 0;
+#X connect 46 0 45 0;
+#X connect 48 0 50 0;
+#X connect 49 0 46 0;
+#X connect 50 0 47 0;
+#X connect 52 0 56 0;
+#X connect 53 0 52 0;
+#X connect 56 0 51 0;
+#X restore 91 84 pd controls-docs;
+#N canvas 566 48 714 677 audio-routing-Example 0;
+#X text 36 19 AUDIO INPUTS - Signals going to the modules;
+#X obj 123 52 tgl 15 0 empty empty empty 17 7 0 10 -204786 -1 -1 0
+1;
+#N canvas 0 22 377 419 test__ 0;
+#X obj 45 206 s_rhodey mypiano;
+#X obj 45 168 pack 0 0;
+#X obj 45 114 m_majorscale 60;
+#X obj 45 87 random 7;
+#X obj 45 60 metro 1000;
+#X obj 45 141 makenote 80 50;
+#X obj 46 261 e_pan 0.5;
+#X obj 109 238 hsl 50 15 0 1 0 0 empty empty pan 20 8 1 10 -262144
+-86277 -1 0 1;
+#X obj 45 17 inlet;
+#X obj 45 38 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 45 292 outlet~;
+#X obj 105 292 outlet~;
+#X connect 0 0 6 0;
+#X connect 1 0 0 0;
+#X connect 2 0 5 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 5 0 1 0;
+#X connect 5 1 1 1;
+#X connect 6 0 10 0;
+#X connect 6 1 11 0;
+#X connect 7 0 6 1;
+#X connect 8 0 9 0;
+#X connect 9 0 4 0;
+#X restore 123 72 pd test__;
+#X obj 182 106 throw~ \$0-XXX-S-IN-1;
+#X text 336 104 Sent to module decorated with arg "\$0-XXX";
+#X obj 166 196 catch~ \$0-XXX-S-IN-1;
+#X obj 124 136 throw~ \$0-XXX-S-IN-0;
+#X obj 167 217 catch~ \$0-XXX-S-IN-0;
+#X text 64 237 these would be inside a decorator tagged with "\$0-XXX"
+;
+#X connect 1 0 2 0;
+#X connect 2 0 6 0;
+#X connect 2 1 3 0;
+#X restore 91 132 pd audio-routing-Example;
+#X text 66 29 RJC-1000 master patch docs.;
+#N canvas 267 22 733 484 TODO 0;
+#X text 129 114 TODO: Example how one module (e.g. a score) can control
+another module (e.g. a synth);
+#X text 130 171 What about deletion or updates of a module config?
+Should we use (16) separate subpatches?;
+#X text 123 218 TODO: Send something to ALL;
+#X restore 361 27 pd TODO;

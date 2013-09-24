@@ -1,0 +1,11 @@
+#N canvas 0 22 450 300 10;
+#X msg 202 60 \; to-python hello \; to-python servus joh! \;;
+#X obj 202 39 loadbang;
+#X obj 31 37 r from-python;
+#X obj 31 56 list prepend set;
+#X obj 31 77 list trim;
+#X msg 31 98;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;

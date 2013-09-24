@@ -1,0 +1,18 @@
+#N canvas 245 102 428 271 10;
+#X obj 161 102 f;
+#X obj 161 131 makefilename GW%d;
+#X obj 124 53 list split 1;
+#X obj 124 110 list;
+#X obj 124 77 t b a;
+#X obj 124 204 send;
+#X obj 124 31 inlet;
+#X obj 124 162 list trim;
+#X connect 0 0 1 0;
+#X connect 1 0 5 1;
+#X connect 2 0 4 0;
+#X connect 2 1 3 1;
+#X connect 3 0 7 0;
+#X connect 4 0 3 0;
+#X connect 4 1 0 0;
+#X connect 6 0 2 0;
+#X connect 7 0 5 0;

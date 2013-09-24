@@ -1,0 +1,41 @@
+#N canvas 86 36 652 436 10;
+#X declare -path .;
+#X obj 114 286 _module_pianist;
+#X obj 111 368 soundoutput;
+#X obj 177 73 swap 60000;
+#X obj 181 99 /;
+#X obj 180 17 hsl 128 15 30 180 0 0 empty empty bpm -2 -8 0 10 -257985
+-1 -1 3200 1;
+#X obj 123 138 metro 123;
+#X obj 122 111 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 121 172 count;
+#X msg 121 204 tick \$1;
+#X msg 218 169 bpm \$1;
+#X obj 322 82 hsl 128 15 0 127 0 0 empty empty articulate -2 -8 0 10
+-257985 -1 -1 700 1;
+#X msg 319 139 articulate \$1;
+#X obj 479 75 hsl 128 15 40 90 0 0 empty empty root -2 -8 0 10 -260097
+-1 -1 1200 1;
+#X msg 479 117 rootnote \$1;
+#X obj 496 153 tgl 15 0 empty empty majmin 17 7 0 10 -258113 -1 -1
+1 1;
+#X msg 496 176 majmin \$1;
+#X connect 0 0 1 0;
+#X connect 0 1 1 1;
+#X connect 2 0 3 0;
+#X connect 2 1 3 1;
+#X connect 3 0 5 1;
+#X connect 3 0 9 0;
+#X connect 4 0 2 0;
+#X connect 5 0 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 8 0 0 1;
+#X connect 9 0 0 1;
+#X connect 10 0 11 0;
+#X connect 11 0 0 1;
+#X connect 12 0 13 0;
+#X connect 13 0 0 1;
+#X connect 14 0 15 0;
+#X connect 15 0 0 1;

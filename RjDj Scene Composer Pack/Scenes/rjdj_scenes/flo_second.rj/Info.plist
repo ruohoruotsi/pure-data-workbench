@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>Florian Waldner</string>
+		<key>description</key>
+		<string>Shake your phone to re-arrange the song </string>
+		<key>name</key>
+		<string>flo_second</string>
+		<key>category</key>
+		<string>Move</string>
+	</dict>
+</dict>
+</plist>

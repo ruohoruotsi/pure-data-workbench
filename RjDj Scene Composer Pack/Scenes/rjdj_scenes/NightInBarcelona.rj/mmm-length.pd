@@ -1,0 +1,7 @@
+#N canvas 0 22 302 143 10;
+#X obj 21 25 inlet;
+#X obj 21 85 outlet;
+#X obj 21 55 list length;
+#X msg 98 25 version 0.1.0;
+#X connect 0 0 2 0;
+#X connect 2 0 1 0;

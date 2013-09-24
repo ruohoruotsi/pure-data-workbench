@@ -1,0 +1,6 @@
+#N canvas 0 22 450 300 10;
+#X obj 10 15 r \$1;
+#X obj 10 36 list prepend \$1;
+#X obj 10 56 outlet;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;

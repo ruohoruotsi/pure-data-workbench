@@ -1,0 +1,8 @@
+#N canvas 406 30 205 164 10;
+#X obj 16 13 letter a \$1 \$2;
+#X obj 16 33 letter b \$1 \$2;
+#X obj 16 53 letter c \$1 \$2;
+#X obj 16 73 letter d \$1 \$2;
+#X obj 16 93 letter e \$1 \$2;
+#X obj 16 113 letter f \$1 \$2;
+#X obj 16 133 letter g \$1 \$2;

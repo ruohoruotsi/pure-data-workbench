@@ -1,0 +1,38 @@
+#N canvas 497 297 455 342 10;
+#X obj 140 11 inlet~;
+#X obj 169 274 outlet~;
+#X obj 210 188 +~;
+#X obj 227 160 *~;
+#X obj 8 28 hsl 64 16 0 127 0 1 \$0/length \$1/length length -2 -6
+0 8 -260818 -1 -1 3423 1;
+#X obj 8 59 hsl 64 16 0 127 0 1 \$0/feedback \$1/feedback feedback
+-2 -6 0 8 -260818 -1 -1 4465 1;
+#X obj 307 131 / 100;
+#X obj 227 24 mtof;
+#X obj 385 5 block~ 1;
+#X obj 316 189 table \$0-del 2000;
+#X obj 210 253 delwrite~ \$0-del 2000;
+#X obj 307 109 r \$0/feedback;
+#X obj 227 3 r \$0/length;
+#X obj 227 87 /;
+#X obj 210 208 hip~ 5;
+#X obj 210 228 clip~ -0.5 0.5;
+#X msg 227 66 8000;
+#X obj 227 45 t b f;
+#X obj 227 109 vd~ \$0-del;
+#X connect 0 0 2 0;
+#X connect 2 0 14 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 1;
+#X connect 6 0 3 1;
+#X connect 7 0 17 0;
+#X connect 11 0 6 0;
+#X connect 12 0 7 0;
+#X connect 13 0 18 0;
+#X connect 14 0 15 0;
+#X connect 15 0 10 0;
+#X connect 16 0 13 0;
+#X connect 17 0 16 0;
+#X connect 17 1 13 1;
+#X connect 18 0 3 0;
+#X coords 0 0 1 1 120 80 1 0 0;

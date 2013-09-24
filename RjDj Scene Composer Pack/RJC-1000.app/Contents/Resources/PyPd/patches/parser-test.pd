@@ -1,0 +1,56 @@
+#N canvas 306 128 774 557 10;
+#X obj 515 271 tabwrite~ \$0-scope;
+#N canvas 0 22 450 300 (subpatch) 0;
+#X array \$0-scope 441 float 2;
+#X coords 0 1 441 -1 200 140 1;
+#X restore 468 358 graph;
+#X obj 515 249 metro 100;
+#X obj 515 230 tgl 15 0 empty empty scope 17 7 1 10 -262144 -1 -1 0
+1;
+#X msg 540 80 dry \$1;
+#X floatatom 540 61 5 0 0 1 dry_wet - -;
+#N canvas 377 90 827 709 REFERENCE 0;
+#X text 135 336 Tags: tag_one \, tag_two;
+#X text 115 301 Description: Some kind of verbose description here.
+;
+#X text 114 121 Name: thing;
+#X text 114 174 Argument 0: first argument (required);
+#X text 114 194 Argument 1: second argument (optional);
+#X text 114 214 Inlet 0: my first inlet is blah;
+#X text 114 234 Inlet 1: msg1 <msg1arg>: what this message does. msg2
+<msg2arg>: what this other message does \, default 0 which is the default
+;
+#X text 114 278 Outlet 0: what comes out the second outlet.;
+#X text 113 141 Summary: what this thing does is blah blah blah;
+#X coords 0 -1 1 1 450 450 1 100 100;
+#X restore 5 48 pd REFERENCE;
+#X obj 470 136 *~;
+#X text 7 14 thing - this is my thing;
+#X obj 543 35 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 540 100 route dry;
+#X obj 540 120 int;
+#X obj 540 142 / 127;
+#X obj 471 83 osc~ 220;
+#X obj 470 167 expr~ 2 / (1 + pow(2.71828 \, -$v1)) - 1;
+#X obj 471 106 *~ 10;
+#N canvas 0 22 450 300 semicolon-test 0;
+#X msg 10 18 this is a message box \, with comments \, and also \;
+semicolons! yes it is. it's like this: yo. test \; test \; test \;
+;
+#X obj 10 56 print;
+#X connect 0 0 1 0;
+#X restore 469 311 pd semicolon-test;
+#X obj 633 213 osc~ 440;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X connect 4 0 10 0;
+#X connect 5 0 4 0;
+#X connect 7 0 14 0;
+#X connect 9 0 5 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 7 1;
+#X connect 13 0 15 0;
+#X connect 14 0 0 0;
+#X connect 15 0 7 0;

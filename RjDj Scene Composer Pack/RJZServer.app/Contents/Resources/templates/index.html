@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>RJZ Server</title>
+    <link href="/media/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="/media/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/media/style.css" rel="stylesheet" type="text/css" />
+    <meta name='viewport' content='width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=1;' />
+  </head>
+
+  <body>
+    <div class="container">
+
+      <header>
+	<h1 id="page-title">Install Scenes</h1>
+      </header>
+
+      <article>
+
+	<section id="downloads">
+	  <ul class="unstyled">
+	    % for r in rjzs:
+	    <li>
+	      <div class="alert-message block-message">
+		<h4 title="${r}">${r}</h4>
+		<p>
+		  <a href='rjdj://${headers['HOST']}/${r}' class='btn primary'>RjDj</a>
+		  <a href='rjvy://${headers['HOST']}/${r}' class='btn'>Rj Voyager</a>
+		</p>
+	      </div>
+	    </li>
+	    % endfor
+	  </ul>
+	</section>
+
+	<section id="content">
+	  <h2>Instructions</h2>
+	  <dl>
+	    <dt>Start RJZ Server on your computer</dt>
+	    <dd>RJZ Server creates a small website on your computer that you can reach from your iThing to install scenes.</dd>
+
+	    <dt>Select scene directory</dt>
+	    <dd>In <em>File -> Set scene directory</em> you can point Rjzserver to where you keep your scenes.<br />
+	    Point it to a directory that contains scene folders with the .rj file name extension.</dd>
+
+	    <dt>Install scenes</dt>
+	    <dd>To install scenes, you browse to this page with Safari on your iThing by putting 'http://${headers['HOST']}/' into the address bar of Safari on your device.</dd>
+
+	  </dl>
+	  <p>Tap the install button on a scene, and RjDj will open and download the scene from your computer.</p>
+	</section>
+
+	<section>
+	  <h2>RJZ Files</h2>
+	  <p>If you just want the rjz-files, you can get them here:</p>
+	  % for r in rjzs:
+	  <p><a class="btn" href='${r}'>Download ${r}</a></p>
+	  % endfor
+	</section>
+      </article>
+
+      <footer>
+	<p><small>Original RJZ Server by Chris McCormick. Adopted for <a href="http://rjdj.me"">Reality Jockey Ltd.</a> by <a href="mailto:christian.h@rjdj.me">Christian Haudum</a>.</small></p>
+	<p><small>This software is GPLv3.</small></p>
+      </footer>
+
+    </div>
+  </body>
+</html>

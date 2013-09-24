@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+		<key>author</key>
+		<string>RjDj team</string>
+		<key>description</key>
+		<string>Shake to the rythm of the bells and if you have a microphone, feel free to hoho and sing along. Merry X-mas from your RjDj team.</string>
+		<key>name</key>
+		<string>JingleMe</string>
+		<key>category</key>
+		<string>Sing</string>
+	</dict>
+</dict>
+</plist>

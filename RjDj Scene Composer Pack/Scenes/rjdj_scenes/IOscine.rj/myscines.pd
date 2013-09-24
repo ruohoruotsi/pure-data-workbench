@@ -1,0 +1,9 @@
+#N canvas 393 179 364 314 10;
+#X obj 75 45 scine left 1;
+#X obj 75 65 scine left 2;
+#X obj 75 85 scine left 3;
+#X obj 75 105 scine left 4;
+#X obj 75 135 scine left 5;
+#X obj 75 155 scine left 6;
+#X obj 75 175 scine left 7;
+#X obj 75 195 scine left 8;

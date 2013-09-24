@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>info</key>
+	<dict>
+        <key>author</key>
+		<string>Martin Brinkmann</string>
+		<key>bundleIdentifier</key>
+		<string>me.rjdj</string>
+		<key>description</key>
+        <string>Shake, twist, and tilt your iThing to create soundparticles ranging from sleighballs to boiling kettles. Plink is copyrighted, but is free to use for any reasonable purpose. http://www.martin-brinkmann.de/</string>
+		<key>name</key>
+		<string>Plink</string>
+		<key>category</key>
+		<string>Shake</string>
+	</dict>
+    <key>installLocation</key>
+	<string>Plink.rj</string>
+</dict>
+</plist>
